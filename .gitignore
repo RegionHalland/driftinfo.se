@@ -1,0 +1,28 @@
+# Vendor
+vendor/*
+web/app/themes/regionhalland/vendor/*
+
+# Cache
+web/app/themes/regionhalland/.cache-loader/*
+
+# Composer
+composer.lock
+
+# OS
+.DS_Store
+
+# Application
+web/app/mu-plugins/*/
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/upgrade/*
+!web/app/upgrade/.gitkeep
+
+# Wordpress
+web/wp/*
+
+# Dotenv
+.env
+.env.*

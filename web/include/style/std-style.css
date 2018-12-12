@@ -1,0 +1,197 @@
+﻿
+/* design v.1 
+*/
+.std-container {
+padding:0;
+margin:auto;
+width:100%;
+position: relative;
+height: 100vh;
+}
+
+.std-container-inner{
+position: relative;
+padding-bottom:2em;
+width:98%;
+margin:auto;
+}
+ 
+
+.std-search-content{
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+width:100%;
+background-color:#004B93; /* bakgrund för sökfältet */
+font-size: 1em;
+}
+
+
+/* sök fält icon, button */
+.std-search-form{ position:relative; width:100%; margin-top: 1em; margin:auto;}
+.std-search-form input[type=text]{ 
+      border-radius: 4px;
+    width:100%;
+    box-sizing: border-box;
+    border: 0px;
+    border-radius: 4px;
+    padding:20px 20px 20px 60px;
+    background-color: white;
+}
+.std-search-form button{ 
+    font-weight: bold;
+     cursor: pointer;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    border-left: 1px solid #ccc;
+    border-radius: 3px;
+    width:6em;
+    height:3.2em;
+    background-color: white;
+}
+
+.std-search-form button:hover{ background: #e1e1e1; }
+.std-search-icon{ position:absolute; color: #e1e1e1; left: 1%; top: 25%; font-size: 1.5em;}
+.std-close-btn{padding:10px; font-size: 2.5em; cursor: pointer; position: absolute; right:3%; top:1%; z-index: 10; }
+/* sök fält dropdown  */
+.std-search-dropdown-result{
+    display: none;
+    z-index: 10;
+    width: 90%;
+    background-color: #FFFFFF;
+    border: 1px solid #cccccc;
+    position: absolute;
+    top:14em;
+    left:5%;
+    height: 70vh;
+       overflow: scroll;
+       overflow-x:hidden;
+       font-size: 0.7em;
+}/* end sökfält */
+
+
+/**/
+.std-w10{width:10%;}
+
+/* Sök top flikar */
+.std-search-tab{margin-top: 20px; margin-bottom: 20px;}
+
+.std-search-tab li{
+  font-size: 0.8em;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: 16.66%;
+    padding-top: 0.6em;
+     padding-bottom: 0.6em;
+      margin-left:-5px;
+        border-left: 1px solid #ccc;
+}
+.std-search-tab li:hover{ background-color: #e1e1e1; }
+
+.std-search-tab-off{margin-bottom: -10px;background-color: #f0f0f0;border-top: 1px solid #ccc;border-left: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+.std-search-tab-active{background-color: #FFFFFF;box-shadow: 0 -6px 0 #004B93;}
+
+/* sök resultat innehållet */
+.std-search-result{position: relative;padding-top: 10px;font-size: 0.8em;}
+.std-search-result h3{color: #084B8A;}
+.std-search-result a{text-decoration: none;}
+.std-search-result button{ /* info knappen (i) */
+    opacity: 0.6; cursor: pointer; 
+    background-color:#004B93; border-radius: 50%; 
+   border: 0px; padding-left:10px; padding-right: 10px; 
+   padding-top: 5px; padding-bottom: 5px; color: #FFF; 
+   position: absolute;
+ right:0; top:1.5em; font-style: italic;}
+.std-search-result button:hover{ opacity: 1;}
+
+/* form select fältet */
+.std-search-select{ position: relative; height: 4em;}
+.std-search-select ul li{cursor: pointer; display:inline-block;width:18em; padding-right: 1em; float:left;}
+.std-search-select ul li select{cursor: pointer; border: 1px solid #333;background:white;width:98%;}
+.std-search-count{width: 90%; margin:auto;}
+
+/* paging */
+.std-pages-button{ position: relative; width: 100%; margin: auto; padding: 10px;}
+.std-pages-button ul li{display:inline-block; width:33%; font-size: 2em;}
+.std-pages-button ul li select{cursor: pointer; border: 1px solid #333; background:white;width:90%;}
+.std-pages-button-select{width:70%;}
+.std-pages-button button{cursor: pointer; width: 90%;}
+
+ /* söklist linje */
+.std-line{border-bottom: 1px solid grey;}
+.std-break{ display: table; height: 3em; width:100%; }
+
+/* loading progress */
+#std-search-loader{display: none;}
+
+ .std-loader-progress {
+    position: absolute;;
+    left:45%; top: 25%;
+    margin:auto;
+    z-index:100;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #3498db;
+  border-bottom: 10px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: std-loader-spin 1s linear infinite;
+  animation: std-loader-spin 1s linear infinite;
+}
+@-webkit-keyframes std-loader-spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes std-loader-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* end loding dropdown */
+
+/* responsiv */
+@media (max-width:65em){
+    .std-container {width:100%;}
+    .std-container-inner {width:96%;}
+}
+
+
+
+
+/* globala form*/
+.white{ color:#FFFFFF;}
+.hide{ display: none; }
+.fixed{ position: fixed; }
+.trans{ opacity: 0.8; }
+ 
+pre{ font-size: 0.7em; }
+
+
+
+
+
+/* demo */
+.std-content-table {
+width:100%;
+border-bottom: 1px solid grey;
+}
+
+.std-content-table li{
+	padding: 10px;
+width:15%;
+	text-align:left;
+	display: inline-block;
+	
+position:relative;            /* Limit height to whatever you need */
+ 
+}
+
+
+.rTable { display: table; width: 100%; font-size: 0.7em; margin-bottom: 10px; }
+.rTableRow { display: table-row;}
+.rTableHeading { display: table-header-group; }
+.rTableBody { display: table-row-group; }
+.rTableFoot { display: table-footer-group; }
+.rTableCell, .rTableHead { display: table-cell; border-bottom: 1px solid grey; padding: 5px; }
+.rTableRow:hover{ background-color: #ffffcc; }
