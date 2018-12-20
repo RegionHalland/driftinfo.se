@@ -4,56 +4,41 @@
 
 @extends('layouts.app')
 
-@section('content') 	
-  	
-  	<!-- **************************** -->
-	<!-- Content with grey background -->
-	<!-- **************************** -->
-	<div class="relative">
-		@include('partials.breadcrumb')
-	</div>	
-	
-	<!-- ************ -->
-	<!-- Page content -->
-	<!-- ************ -->
-	<div class="background-white">
-		<div class="background-white">
-			<div class="container mx-auto p4">
-				<div class="m2 flex flex-wrap">
-					
-					<div class="col-12 lg-col-3">
-					
-						@include('partials.nav-sidebars')
-						
-						<div class="pt2">&nbsp;</div>
+@section('content')
+    
+    <div class="py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-stretch -mx-4 pt-4">
+                
+                @php($mySection = "it-planerad")
+                @include('partials.menu')
+                
+                <header class="hidden md:flex flex-wrap w-full pb-6 px-4">
+                    <div class="w-full md:w-4/12 px-6">
+                        <p class="text-sm">Information</p>
+                    </div>
+                    <div class="w-full md:w-2/12 px-6">
+                        <p class="text-sm">Område</p>
+                    </div>
+                    <div class="w-full md:w-2/12 px-6">
+                        <p class="text-sm">Start</p>
+                    </div>
+                    <div class="w-full md:w-2/12 px-6">
+                        <p class="text-sm">Beräknat avslut</p>
+                    </div>
+                    <div class="w-full md:w-2/12 px-6">
+                        <p class="text-sm">Status</p>
+                    </div>
+                </header>
+                
+                @php($myArea = "Planerad")
+                @php($myItems = get_region_halland_drift_info_it_planerad())   
+                @if(count($myItems) > 0)
+ 	               @include('partials.list-content')
+                @endif
 
-						@include('partials.content-nav')
-					
-					</div>
-					
-					<!-- ************ -->
-					<!-- Page content -->
-					<!-- ************ -->
-					<div class="col-12 lg-col-9">
-						<main class="ml4">
-							
-							<div>
-								<h1>{{ the_title() }}</h1>
-							</div>
-							
-							<div id="main">
-								@while(have_posts()) @php(the_post())
-									@include('partials.article')
-									@include('partials.entry-meta')
-								@endwhile
-							</div>
-
-						</main>
-					</div>
-
-				</div>
-			</div>
-		</div>	
-	</div>
+            </div>
+        </div>
+    </div>
 
 @endsection

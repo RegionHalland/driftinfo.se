@@ -45,7 +45,7 @@
 										@php($numbers = get_region_halland_drift_info_get_numbers())
 										<?php var_dump($numbers); ?>
 										<br>
-										@php($test = get_region_halland_drift_info_it_avslutad())
+										@php($test = get_region_halland_drift_info_pagaende_alla())
 										<?php var_dump($test); ?>
 									
 									@include('partials.entry-meta')

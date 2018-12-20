@@ -1,5 +1,5 @@
 {{--
-	Template Name: IT - Avslutad
+	Template Name: Telefoni - Avslutad
 --}}
 
 @extends('layouts.app')
@@ -10,7 +10,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap items-stretch -mx-4 pt-4">
                 
-                @php($mySection = "it-avslutad")
+                @php($mySection = "telefoni-avslutad")
                 @include('partials.menu')
                 
                 <header class="hidden md:flex flex-wrap w-full pb-6 px-4">
@@ -32,7 +32,7 @@
                 </header>
                 
                 @php($myArea = "Avslutad")
-                @php($myItems = get_region_halland_drift_info_it_avslutad())   
+                @php($myItems = get_region_halland_drift_info_telefoni_avslutad())   
                 @if(count($myItems) > 0)
                 	@include('partials.list-content')
                 @endif

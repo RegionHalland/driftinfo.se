@@ -11,8 +11,9 @@
         // *** Toogle content via accordian ***
         // ************************************
         $('#myAttributeAccordian').find('.myAttributeAccordian-toggle').click(function(){
-            $(this).next().slideToggle('slow');
-            $(".myAttributeAccordian-content").not($(this).next()).slideUp('slow');
+            //alert(this.id);
+            $(this).next().slideToggle(300);
+            $(".myAttributeAccordian-content").not($(this).next()).slideUp(300);
         });
 
         // ***************************************
