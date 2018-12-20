@@ -29,6 +29,20 @@
                     <p class="inline-flex py-1 p-3 rounded-full bg-green text-white">Avslutad</p>
                 @endif            
             </div>
+            <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                <h5>Driftinformation</h5>
+            </div>
+            <div class="w-full md:w-12/12 px-6 md:mb-0">
+                <p>{!! $myItem->post_content !!}</p>
+            </div>
+            @if ($myItem->follow_up)
+                <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                    <h5>Uppföljning</h5>
+                </div>
+                <div class="w-full md:w-12/12 px-6 md:mb-0">
+                    <p>{!! $myItem->follow_up !!}</p>
+                </div>
+            @endif
         </div>
     </div>
     @endforeach

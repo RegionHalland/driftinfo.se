@@ -52,6 +52,20 @@
                             <div class="w-full md:w-2/12 px-6 md:mb-0">
                                 <p class="inline-flex py-1 p-3 rounded-full bg-red text-white">Akut</p>
                             </div>
+                            <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                                <h5>Driftinformation</h5>
+                            </div>
+                            <div class="w-full md:w-12/12 px-6 md:mb-0">
+                                <p>{!! $pagande->post_content !!}</p>
+                            </div>
+                            @if ($pagande->follow_up)
+                                <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                                    <h5>Uppföljning</h5>
+                                </div>
+                                <div class="w-full md:w-12/12 px-6 md:mb-0">
+                                    <p>{!! $pagande->follow_up !!}</p>
+                                </div>
+                            @endif
                         </div>
                     </div>
                     @endforeach
@@ -83,6 +97,20 @@
                             <div class="w-full md:w-2/12 px-6 md:mb-0">
                                 <p class="inline-flex py-1 p-3 rounded-full bg-orange">Planerad</p>
                             </div>
+                            <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                                <h5>Driftinformation</h5>
+                            </div>
+                            <div class="w-full md:w-12/12 px-6 md:mb-0">
+                                <p>{!! $planerade->post_content !!}</p>
+                            </div>
+                            @if ($planerade->follow_up)
+                                <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                                    <h5>Uppföljning</h5>
+                                </div>
+                                <div class="w-full md:w-12/12 px-6 md:mb-0">
+                                    <p>{!! $planerade->follow_up !!}</p>
+                                </div>
+                            @endif
                         </div>
                     </div>
                     @endforeach
@@ -114,6 +142,20 @@
                             <div class="w-full md:w-2/12 px-6 md:mb-0">
                                 <p class="inline-flex py-1 p-3 rounded-full bg-green text-white">Avslutad</p>
                             </div>
+                            <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                                <h5>Driftinformation</h5>
+                            </div>
+                            <div class="w-full md:w-12/12 px-6 md:mb-0">
+                                <p>{!! $avslutade->post_content !!}</p>
+                            </div>
+                            @if ($avslutade->follow_up)
+                                <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                                    <h5>Uppföljning</h5>
+                                </div>
+                                <div class="w-full md:w-12/12 px-6 md:mb-0">
+                                    <p>{!! $avslutade->follow_up !!}</p>
+                                </div>
+                            @endif
                         </div>
                     </div>
                     @endforeach
