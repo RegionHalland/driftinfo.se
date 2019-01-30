@@ -16,6 +16,7 @@
       <path value="$PROJECT_DIR$/vendor/oscarotero/env" />
       <path value="$PROJECT_DIR$/vendor/roots/wp-config" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/philippbaschke/acf-pro-installer" />
     </include_path>
   </component>
 </project>
