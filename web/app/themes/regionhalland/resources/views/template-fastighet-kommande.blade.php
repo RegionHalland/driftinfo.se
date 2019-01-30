@@ -1,5 +1,5 @@
 {{--
-	Template Name: Telefoni - Planerad
+	Template Name: Fastiget - Kommande
 --}}
 
 @extends('layouts.app')
@@ -10,14 +10,13 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap items-stretch -mx-4 pt-4">
                 
-                @php($mySection = "telefoni-planerad")
+                @php($mySection = "fastighet-kommande")
                 @include('partials.menu')
                 
-                @php($myArea = "Planerad")
-                @php($myItems = get_region_halland_drift_info_telefoni_planerad())   
+                @php($myItems = get_region_halland_drift_info_fastighet_kommande())
                 @if(count($myItems) > 0)
-                    @include('partials.list-header')
-                	@include('partials.list-content')
+                	@include('partials.list-header')
+                    @include('partials.list-content')
                 @endif
 
             </div>

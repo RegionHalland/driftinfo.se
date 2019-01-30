@@ -19,15 +19,7 @@
                 <p>{!! get_region_halland_drift_fix_date($myItem->end_time) !!}</p>
             </div>
             <div class="w-full md:w-2/12 px-6 md:mb-0">
-                @if ($myArea == "Akut")
-                    <p class="inline-flex py-1 p-3 rounded-full bg-red text-white">Akut</p>
-                @endif
-                @if ($myArea == "Planerad")
-                    <p class="inline-flex py-1 p-3 rounded-full bg-orange">Planerad</p>
-                @endif
-                @if ($myArea == "Avslutad")
-                    <p class="inline-flex py-1 p-3 rounded-full bg-green text-white">Avslutad</p>
-                @endif            
+                <p class="{!! $myItem->status_class !!}">{!! $myItem->status_name !!}</p>
             </div>
             <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
                 <h5>Driftinformation</h5>
@@ -47,4 +39,3 @@
     </div>
     @endforeach
 </div>
-                
