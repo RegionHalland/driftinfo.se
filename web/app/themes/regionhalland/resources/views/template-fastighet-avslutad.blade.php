@@ -13,8 +13,7 @@
                 @php($mySection = "fastighet-avslutad")
                 @include('partials.menu')
                 
-                @php($myArea = "Avslutad")
-                @php($myItems = get_region_halland_drift_info_fastighet_avslutad())   
+                @php($myItems = get_region_halland_drift_info_fastighet_avslutad())
                 @if(count($myItems) > 0)
                 	@include('partials.list-header')
                     @include('partials.list-content')

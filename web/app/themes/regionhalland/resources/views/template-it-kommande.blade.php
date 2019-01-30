@@ -13,7 +13,6 @@
                 @php($mySection = "it-kommande")
                 @include('partials.menu')
                 
-                @php($myArea = "Planerad")
                 @php($myItems = get_region_halland_drift_info_it_kommande())
                 @if(count($myItems) > 0)
                     @include('partials.list-header')

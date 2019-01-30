@@ -14,7 +14,6 @@
                 @include('partials.menu')
                 
                 @php($myItems = get_region_halland_drift_info_it_pagaende())
-
                 @if(count($myItems) > 0)
                 	@include('partials.list-header')
                     @include('partials.list-content')
