@@ -18,14 +18,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="147" column="97" selection-start-line="147" selection-start-column="97" selection-end-line="147" selection-end-column="97" />
+            <state relative-caret-position="357">
+              <caret line="68" column="25" lean-forward="true" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
               <folding>
                 <element signature="e#3122#3148#0#HTML" expanded="true" />
                 <element signature="e#3150#3206#0#HTML" expanded="true" />
                 <element signature="e#3174#3214#0#HTML" expanded="true" />
                 <element signature="e#5225#5392#0#HTML" expanded="true" />
-                <element signature="e#6192#6233#0#HTML" expanded="true" />
                 <element signature="e#6300#6353#0#HTML" expanded="true" />
                 <element signature="e#8130#8170#0#HTML" expanded="true" />
                 <element signature="e#11056#11096#0#HTML" expanded="true" />
@@ -256,7 +255,7 @@
       <workItem from="1548835249014" duration="8995000" />
       <workItem from="1549029942082" duration="10640000" />
       <workItem from="1549381970528" duration="789000" />
-      <workItem from="1558961383565" duration="7533000" />
+      <workItem from="1558961383565" duration="8413000" />
     </task>
     <task id="LOCAL-00001" summary="Justeringar enligt #55">
       <created>1548834767352</created>
@@ -276,13 +275,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71728000" />
+    <option name="totallyTimeSpent" value="72608000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1465798" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.044788275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -416,14 +415,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="147" column="97" selection-start-line="147" selection-start-column="97" selection-end-line="147" selection-end-column="97" />
+        <state relative-caret-position="357">
+          <caret line="68" column="25" lean-forward="true" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
           <folding>
             <element signature="e#3122#3148#0#HTML" expanded="true" />
             <element signature="e#3150#3206#0#HTML" expanded="true" />
             <element signature="e#3174#3214#0#HTML" expanded="true" />
             <element signature="e#5225#5392#0#HTML" expanded="true" />
-            <element signature="e#6192#6233#0#HTML" expanded="true" />
             <element signature="e#6300#6353#0#HTML" expanded="true" />
             <element signature="e#8130#8170#0#HTML" expanded="true" />
             <element signature="e#11056#11096#0#HTML" expanded="true" />

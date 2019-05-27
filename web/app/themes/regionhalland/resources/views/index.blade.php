@@ -48,50 +48,66 @@
     ?>
 
     @php($myNumbers = get_region_halland_drift_info_get_numbers())
-    <?php var_dump($myNumbers); ?>
     
-    @if($sid == 1)
-        <a href="./?oid={{$oid}}&sid=1" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline bg-blue-light">Pågående</a>
-    @else
-        <a href="./?oid={{$oid}}&sid=1" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline">Pågående</a>
-    @endif
 
-    @if($sid == 2)
-        <a href="./?oid={{$oid}}&sid=2" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline bg-blue-light">Kommande</a>
-    @else
-        <a href="./?oid={{$oid}}&sid=2" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline">Kommande</a>
-    @endif
-    
-    @if($sid == 3)
-        <a href="./?oid={{$oid}}&sid=3" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline bg-blue-light">Avslutade</a>
-    @else
-        <a href="./?oid={{$oid}}&sid=3" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline">Avslutade</a>
-    @endif
-
-    <p></p>
-
-    @if($oid == 1)
-        <a href="./?oid=1&sid={{$sid}}" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline bg-blue-light">Alla</a>
-    @else
-        <a href="./?oid=1&sid={{$sid}}" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline">Alla</a>
-    @endif
-
-    @if($oid == 2)
-        <a href="./?oid=2&sid={{$sid}}" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline bg-blue-light">IT/Telefoni</a>
-    @else
-        <a href="./?oid=2&sid={{$sid}}" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline">IT/Telefoni</a>
-    @endif
-
-    @if($oid == 3)
-        <a href="./?oid=3&sid={{$sid}}" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline bg-blue-light">Fastighet</a>
-    @else
-        <a href="./?oid=3&sid={{$sid}}" class="inline-block px-4 py-2 border rounded border-blue text-blue-dark no-underline">Fastighet</a>
-    @endif
-    
 
     <div class="mx-auto" style="max-width: 1440px;">
+
+
         <div class="m2 p2" style="background-color: #F4F4F4; border:1px solid grey">
- 
+            <div class="rh-tabs">
+                <ul class="rh-tabs-list">
+                    <li class="rh-tabs-list-item">
+                        <p class="rh-tabs-list-item-text">
+                            @if($sid == 1)
+                                <a href="./?oid={{$oid}}&sid=1" class="">Pågående</a>
+                            @else
+                                <a href="./?oid={{$oid}}&sid=1" class="">Pågående</a>
+                            @endif
+                        </p>
+                        <span class="rh-labels">{{ $myNumbers['alla-pagaende'] }}</span>
+                    </li>
+                    <li class="rh-tabs-list-item">
+                        <p class="rh-tabs-list-item-text">
+                            @if($sid == 2)
+                                <a href="./?oid={{$oid}}&sid=2" class="">Kommande</a>
+                            @else
+                                <a href="./?oid={{$oid}}&sid=2" class="">Kommande</a>
+                            @endif
+                        </p>
+
+                    </li>
+                    <li class="rh-tabs-list-item">
+                        <p class="rh-tabs-list-item-text">
+                            @if($sid == 3)
+                                <a href="./?oid={{$oid}}&sid=3" class="">Avslutade</a>
+                            @else
+                                <a href="./?oid={{$oid}}&sid=3" class="">Avslutade</a>
+                            @endif
+                        </p>
+
+                    </li>
+                </ul>
+            </div>
+
+            @if($oid == 1)
+                <a href="./?oid=1&sid={{$sid}}" class="">Alla</a>
+            @else
+                <a href="./?oid=1&sid={{$sid}}" class="">Alla</a>
+            @endif
+
+            @if($oid == 2)
+                <a href="./?oid=2&sid={{$sid}}" class="">IT/Telefoni</a>
+            @else
+                <a href="./?oid=2&sid={{$sid}}" class="">IT/Telefoni</a>
+            @endif
+
+            @if($oid == 3)
+                <a href="./?oid=3&sid={{$sid}}" class="">Fastighet</a>
+            @else
+                <a href="./?oid=3&sid={{$sid}}" class="">Fastighet</a>
+            @endif
+
             <div class="m2 p2" style="background: white; border: 1px solid grey">
                 
                 @php($myItems = get_region_halland_drift_info($type))
