@@ -136,7 +136,7 @@
                                     @endif
                                 </div>
                                 <div class="w-full md:w-2/12 px-6 mb-3 md:mb-0">
-                                    @foreach ($myItems[$i]->omrade_new as $omrade)
+                                    @foreach ($myItems[$i]->omrade as $omrade)
                                         <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
                                     @endforeach
                                 </div>
@@ -191,7 +191,7 @@
                                 @endif
                             </div>
                             <div class="w-full md:w-2/12 px-6 mb-3 md:mb-0">
-                                @foreach ($myItem->omrade_new as $omrade)
+                                @foreach ($myItem->omrade as $omrade)
                                     <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
                                 @endforeach
                             </div>
