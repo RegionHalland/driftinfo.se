@@ -100,53 +100,58 @@
            
                 @if($myPagination['antal_items'] > 0)
 
-                    {{-- TODO: Omformulera till en rad i en grid. --}}
-                    <header class="">
-                        <div class="">
-                            <p class="">Information</p>
+
+                    <header class="clearfix m2 p2 hidden-sm">
+                        <div class="col col-12 md-col-4">
+                            <strong>Information</strong>
                         </div>
-                        <div class="">
-                            <p class="">Område</p>
+                        <div class="col col-12 md-col-2">
+                            <strong>Område</strong>
                         </div>
-                        <div class="">
-                            <p class="">Start</p>
+                        <div class="col col-12 md-col-2">
+                            <strong>Start</strong>
                         </div>
-                        <div class="">
-                            <p class="">Beräknat avslut</p>
+                        <div class="col col-12 md-col-2">
+                            <strong>Beräknat avslut</strong>
                         </div>
-                        <div class="">
-                            <p class="">Status</p>
+                        <div class="col col-12 md-col-2">
+                            <strong>Uppdateringar</strong>
                         </div>
                     </header>
 
                     <div class="">
                         <?php while ($i < $myPagination['end_item']) { ?>
                         <div class="m2 p2" style="border-left: 8px solid #61A2D8; border-top: 1px solid grey; border-bottom: 1px solid grey; border-right: 1px solid grey;">
-                            <div class="">
-                                <div class="">
+
+
+                            <div class="clearfix">
+                                <div class="col col-12 md-col-4">
                                     <h3 class="">{!! $myItems[$i]->post_title !!}</h3>
                                     @if($myItems[$i]->date_updated)
                                         <p class="">Uppdaterad: {!! get_region_halland_drift_fix_date($myItems[$i]->date_updated) !!}</p>
                                     @endif
                                 </div>
-                                <div class="">
+                                <div class="col col-12 md-col-2">
                                     @foreach ($myItems[$i]->omrade as $omrade)
                                         <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
                                     @endforeach
                                 </div>
-                                <div class="">
+                                <div class="col col-12 md-col-2">
                                     <p>{!! get_region_halland_drift_fix_date($myItems[$i]->start_time) !!}</p>
                                 </div>
-                                <div class="">
+                                <div class="col col-12 md-col-2">
                                     <p>{!! get_region_halland_drift_fix_date($myItems[$i]->end_time) !!}</p>
                                 </div>
-                                <div class="">
-                                    <p class="{!! $myItems[$i]->status_class !!}">{!! $myItems[$i]->status_name !!}</p>
+                                <div class="col col-12 md-col-2">
+                                   .
                                 </div>
-                                <div class="">
-                                    <h5>Driftinformation</h5>
+                                <div class="col col-12">
+                                    <p class="rh-labels">{!! $myItems[$i]->status_name !!}</p>
                                 </div>
-                                <div class="">
+                                <div class="col col-12">
+                                    <strong>Beskrivning:</strong>
+                                </div>
+                                <div class="col col-12 p2" style="background: #F4F4F4; border:1px solid #D1D1D1;">
                                     <p>{!! $myItems[$i]->post_content !!}</p>
                                 </div>
                                 @if ($myItems[$i]->all_follow_up)
@@ -173,43 +178,43 @@
 
         @if($showDeleted == 1)        
             @php($myItems = get_region_halland_drift_info(10))
-            <div class="w-full px-4">
+            <div class="">
                 @foreach($myItems as $myItem)
-                    <div class="mb-4">
-                        <div class="flex flex-wrap relative items-center w-full border py-6 overflow-hidden">
-                            <span aria-hidden class="absolute h-full w-1 bg-red pin-t pin-l"></span>
-                            <div class="w-full md:w-4/12 px-6 mb-3 md:mb-0">
-                                <h3 class="mb-1">{!! $myItem->post_title !!}</h3>
+                    <div class="">
+                        <div class="">
+
+                            <div class="">
+                                <h3 class="">{!! $myItem->post_title !!}</h3>
                                 @if($myItem->date_updated)
-                                    <p class="text-sm text-grey-dark">Uppdaterad: {!! get_region_halland_drift_fix_date($myItem->date_updated) !!}</p>
+                                    <p class="">Uppdaterad: {!! get_region_halland_drift_fix_date($myItem->date_updated) !!}</p>
                                 @endif
                             </div>
-                            <div class="w-full md:w-2/12 px-6 mb-3 md:mb-0">
+                            <div class="">
                                 @foreach ($myItem->omrade as $omrade)
                                     <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
                                 @endforeach
                             </div>
-                            <div class="w-full md:w-2/12 px-6 mb-3 md:mb-0">
+                            <div class="">
                                 <p>{!! get_region_halland_drift_fix_date($myItem->start_time) !!}</p>
                             </div>
-                            <div class="w-full md:w-2/12 px-6 mb-3 md:mb-0">
+                            <div class="">
                                 <p>{!! get_region_halland_drift_fix_date($myItem->end_time) !!}</p>
                             </div>
-                            <div class="w-full md:w-2/12 px-6 md:mb-0">
+                            <div class="">
                                 <p class="{!! $myItem->status_class !!}">{!! $myItem->status_name !!}</p>
                             </div>
-                            <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                            <div class="">
                                 <h5>Driftinformation</h5>
                             </div>
-                            <div class="w-full md:w-12/12 px-6 md:mb-0">
+                            <div class="">
                                 <p>{!! $myItem->post_content !!}</p>
                             </div>
                             @if ($myItem->all_follow_up)
-                                <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                                <div class="">
                                     <h5>Uppföljning</h5>
                                 </div>
                                 @foreach ($myItem->all_follow_up as $followUp)
-                                <div class="w-full md:w-12/12 px-6 md:mb-0">
+                                <div class="">
                                     <p>{{ $followUp['rubrik'] }}</p>
                                     <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p>
                                     <p>{{ $followUp['content'] }}</p><br>
