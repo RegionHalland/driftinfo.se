@@ -48,6 +48,10 @@
       "url": "https://github.com/RegionHalland/region-halland-acf-drift-info.git"
     },
     {
+      "type": "vcs",
+      "url": "https://github.com/RegionHalland/region-halland-array-pagination.git"
+    },
+    {
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -77,7 +81,8 @@
     "regionhalland/region-halland-mobile-detect": "1.0.0",
     "regionhalland/region-halland-acf-add-theme-subpage": "1.0.0",
     "regionhalland/region-halland-acf-cookie-notice": "1.0.0",
-    "regionhalland/region-halland-acf-drift-info": "1.1.0"
+    "regionhalland/region-halland-array-pagination": "1.0.1",
+    "regionhalland/region-halland-acf-drift-info": "2.0.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
