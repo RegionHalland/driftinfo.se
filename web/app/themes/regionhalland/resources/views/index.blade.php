@@ -89,78 +89,72 @@
     @endif
     
 
-    <div class="py-6">
-        <div class="container mx-auto px-4">
+    <div class="mx-auto" style="max-width: 1440px;">
+        <div class="m2 p2" style="background-color: #F4F4F4; border:1px solid grey">
  
-            <div class="flex flex-wrap items-stretch -mx-4 pt-4">
+            <div class="m2 p2" style="background: white; border: 1px solid grey">
                 
                 @php($myItems = get_region_halland_drift_info($type))
                 @php($myPagination = get_region_halland_array_pagination(count($myItems),10,'sida'))
                 @php($i = $myPagination['start_item'])
            
                 @if($myPagination['antal_items'] > 0)
-                    <header class="hidden md:flex flex-wrap w-full pb-6 px-4">
-                        <div class="w-full md:w-4/12 px-6">
-                            <p class="text-sm">Information</p>
+
+                    {{-- TODO: Omformulera till en rad i en grid. --}}
+                    <header class="">
+                        <div class="">
+                            <p class="">Information</p>
                         </div>
-                        <div class="w-full md:w-2/12 px-6">
-                            <p class="text-sm">Område</p>
+                        <div class="">
+                            <p class="">Område</p>
                         </div>
-                        <div class="w-full md:w-2/12 px-6">
-                            <p class="text-sm">Start</p>
+                        <div class="">
+                            <p class="">Start</p>
                         </div>
-                        <div class="w-full md:w-2/12 px-6">
-                            <p class="text-sm">Beräknat avslut</p>
+                        <div class="">
+                            <p class="">Beräknat avslut</p>
                         </div>
-                        <div class="w-full md:w-2/12 px-6">
-                            <p class="text-sm">Status</p>
+                        <div class="">
+                            <p class="">Status</p>
                         </div>
                     </header>
-                    <span>
-                        @if($myPagination['antal_items'] == 1)
-                            <h2 class="mb1" style="border-bottom: 4px solid #378A30">{{ $myPagination['antal_items'] }} driftstörning - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
-                        @else
-                            <h2 class="mb1" style="border-bottom: 4px solid #378A30">{{ $myPagination['antal_items'] }} driftstörningar - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
-                        @endif
-                    </span>
-                    
-                    <div class="w-full px-4">
+
+                    <div class="">
                         <?php while ($i < $myPagination['end_item']) { ?>
-                        <div class="mb-4">
-                            <div class="flex flex-wrap relative items-center w-full border py-6 overflow-hidden">
-                                <span aria-hidden class="absolute h-full w-1 bg-red pin-t pin-l"></span>
-                                <div class="w-full md:w-4/12 px-6 mb-3 md:mb-0">
-                                    <h3 class="mb-1">{!! $myItems[$i]->post_title !!}</h3>
+                        <div class="m2 p2" style="border-left: 8px solid #61A2D8; border-top: 1px solid grey; border-bottom: 1px solid grey; border-right: 1px solid grey;">
+                            <div class="">
+                                <div class="">
+                                    <h3 class="">{!! $myItems[$i]->post_title !!}</h3>
                                     @if($myItems[$i]->date_updated)
-                                        <p class="text-sm text-grey-dark">Uppdaterad: {!! get_region_halland_drift_fix_date($myItems[$i]->date_updated) !!}</p>
+                                        <p class="">Uppdaterad: {!! get_region_halland_drift_fix_date($myItems[$i]->date_updated) !!}</p>
                                     @endif
                                 </div>
-                                <div class="w-full md:w-2/12 px-6 mb-3 md:mb-0">
+                                <div class="">
                                     @foreach ($myItems[$i]->omrade as $omrade)
                                         <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
                                     @endforeach
                                 </div>
-                                <div class="w-full md:w-2/12 px-6 mb-3 md:mb-0">
+                                <div class="">
                                     <p>{!! get_region_halland_drift_fix_date($myItems[$i]->start_time) !!}</p>
                                 </div>
-                                <div class="w-full md:w-2/12 px-6 mb-3 md:mb-0">
+                                <div class="">
                                     <p>{!! get_region_halland_drift_fix_date($myItems[$i]->end_time) !!}</p>
                                 </div>
-                                <div class="w-full md:w-2/12 px-6 md:mb-0">
+                                <div class="">
                                     <p class="{!! $myItems[$i]->status_class !!}">{!! $myItems[$i]->status_name !!}</p>
                                 </div>
-                                <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                                <div class="">
                                     <h5>Driftinformation</h5>
                                 </div>
-                                <div class="w-full md:w-12/12 px-6 md:mb-0">
+                                <div class="">
                                     <p>{!! $myItems[$i]->post_content !!}</p>
                                 </div>
                                 @if ($myItems[$i]->all_follow_up)
-                                    <div class="w-full md:w-12/12 px-6 md:mb-2 md:mt-6">
+                                    <div class="">
                                         <h5>Uppföljning</h5>
                                     </div>
                                     @foreach ($myItems[$i]->all_follow_up as $followUp)
-                                    <div class="w-full md:w-12/12 px-6 md:mb-0">
+                                    <div class="">
                                         <p>{{ $followUp['rubrik'] }}</p>
                                         <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p>
                                         <p>{{ $followUp['content'] }}</p><br>
@@ -172,7 +166,7 @@
                         <?php $i++; } ?>
                     </div>
                 @else
-                    <h2 class="mb1" style="border-bottom: 4px solid #378A30">Det finns inga driftstörningar inom detta urval</h2>
+                    <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga driftstörningar inom detta urval</h2>
                 @endif
             </div>
         </div>
@@ -229,6 +223,13 @@
         @endif
 
         @if($myPagination['antal_items'] > 0)
+            <span>
+                        @if($myPagination['antal_items'] == 1)
+                    <h2 class="" style="border-bottom: 4px solid #378A30">{{ $myPagination['antal_items'] }} driftstörning - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
+                @else
+                    <h2 class="" style="border-bottom: 4px solid #378A30">{{ $myPagination['antal_items'] }} driftstörningar - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
+                @endif
+                    </span>
             <div>
                 <span><a class="rh-pagination-link rh-pagination-link-previous" style="line-height: 3;" href="./?sida={{ $myPagination['first_page'] }}&oid={{ $oid }}&sid={{ $sid }}"><<</a></span>
                 <span><a class="rh-pagination-link" style="line-height: 3;" href="./?sida={{ $myPagination['prev_page'] }}&oid={{ $oid }}&sid={{ $sid }}"><</a></span>
