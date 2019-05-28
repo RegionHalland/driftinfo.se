@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abe4f568-37b0-4ae5-83b5-af15b4864f47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +18,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="114" column="17" lean-forward="true" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+            <state relative-caret-position="298">
+              <caret line="54" column="67" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
               <folding>
                 <element signature="e#1114#1140#0#HTML" expanded="true" />
-                <element signature="e#1171#1227#0#HTML" expanded="true" />
                 <element signature="e#3433#3482#0#HTML" expanded="true" />
                 <element signature="e#4765#4893#0#HTML" expanded="true" />
                 <element signature="e#6706#6760#0#HTML" expanded="true" />
@@ -109,8 +108,8 @@
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/head.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/footer.blade.php" />
-        <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/header.blade.php" />
+        <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php" />
       </list>
     </option>
   </component>
@@ -274,7 +273,7 @@
       <workItem from="1548835249014" duration="8995000" />
       <workItem from="1549029942082" duration="10640000" />
       <workItem from="1549381970528" duration="789000" />
-      <workItem from="1558961383565" duration="12935000" />
+      <workItem from="1558961383565" duration="13182000" />
     </task>
     <task id="LOCAL-00001" summary="Justeringar enligt #55">
       <created>1548834767352</created>
@@ -294,7 +293,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77130000" />
+    <option name="totallyTimeSpent" value="77377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-43" y="56" width="2560" height="1440" extended-state="0" />
@@ -444,11 +443,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="114" column="17" lean-forward="true" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+        <state relative-caret-position="298">
+          <caret line="54" column="67" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
           <folding>
             <element signature="e#1114#1140#0#HTML" expanded="true" />
-            <element signature="e#1171#1227#0#HTML" expanded="true" />
             <element signature="e#3433#3482#0#HTML" expanded="true" />
             <element signature="e#4765#4893#0#HTML" expanded="true" />
             <element signature="e#6706#6760#0#HTML" expanded="true" />
