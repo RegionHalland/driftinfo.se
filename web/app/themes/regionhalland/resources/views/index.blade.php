@@ -48,13 +48,11 @@
     ?>
 
     @php($myNumbers = get_region_halland_drift_info_get_numbers())
-    
-
 
     <div class="mx-auto" style="max-width: 1440px;">
 
 
-        <div class="m2 p2" style="background-color: #F4F4F4; border:1px solid grey">
+        <div class="rh-xpad-B" style="background-color: #F4F4F4; border:1px solid grey">
             <div class="rh-tabs">
                 <ul class="rh-tabs-list">
                     <li class="rh-tabs-list-item">
@@ -65,7 +63,6 @@
                                 <a href="./?oid={{$oid}}&sid=1" class="">Pågående</a>
                             @endif
                         </p>
-                        <span class="rh-labels">{{ $myNumbers['alla-pagaende'] }}</span>
                     </li>
                     <li class="rh-tabs-list-item">
                         <p class="rh-tabs-list-item-text">
@@ -75,6 +72,7 @@
                                 <a href="./?oid={{$oid}}&sid=2" class="">Kommande</a>
                             @endif
                         </p>
+
 
                     </li>
                     <li class="rh-tabs-list-item">
@@ -90,23 +88,67 @@
                 </ul>
             </div>
 
+            {{-- Fliknavigation nivå 2 - Alla --}}
             @if($oid == 1)
                 <a href="./?oid=1&sid={{$sid}}" class="">Alla</a>
             @else
                 <a href="./?oid=1&sid={{$sid}}" class="">Alla</a>
             @endif
 
+            <span class="rh-labels">
+            @switch($sid)
+                @case(1)
+                    {{ $myNumbers['alla-pagaende'] }}
+                    @break
+                @case(2)
+                    {{ $myNumbers['alla-kommande'] }}
+                    @break
+                @case(3)
+                    {{ $myNumbers['alla-avslutade'] }}
+                    @break
+            @endswitch
+            </span>
+
+            {{-- Fliknavigation nivå 2 - IT/telefoni --}}
             @if($oid == 2)
                 <a href="./?oid=2&sid={{$sid}}" class="">IT/Telefoni</a>
             @else
                 <a href="./?oid=2&sid={{$sid}}" class="">IT/Telefoni</a>
             @endif
+            <span class="rh-labels">
+            @switch($sid)
+                    @case(1)
+                    {{ $myNumbers['it-telefoni-pagaende'] }}
+                    @break
+                    @case(2)
+                    {{ $myNumbers['it-telefoni-kommande'] }}
+                    @break
+                    @case(3)
+                    {{ $myNumbers['it-telefoni-avslutade'] }}
+                    @break
+                @endswitch
+            </span>
 
+
+            {{-- Fliknavigation nivå 2 - Fastighet --}}
             @if($oid == 3)
                 <a href="./?oid=3&sid={{$sid}}" class="">Fastighet</a>
             @else
                 <a href="./?oid=3&sid={{$sid}}" class="">Fastighet</a>
             @endif
+            <span class="rh-labels">
+            @switch($sid)
+                    @case(1)
+                    {{ $myNumbers['fastighet-pagaende'] }}
+                    @break
+                    @case(2)
+                    {{ $myNumbers['fastighet-kommande'] }}
+                    @break
+                    @case(3)
+                    {{ $myNumbers['fastighet-avslutade'] }}
+                    @break
+                @endswitch
+            </span>
 
             <div class="m2 p2" style="background: white; border: 1px solid grey">
                 
@@ -244,14 +286,14 @@
         @endif
 
         @if($myPagination['antal_items'] > 0)
-            <span>
+            <div class="mx-auto">
                         @if($myPagination['antal_items'] == 1)
                     <h2 class="" style="border-bottom: 4px solid #378A30">{{ $myPagination['antal_items'] }} driftstörning - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
                 @else
                     <h2 class="" style="border-bottom: 4px solid #378A30">{{ $myPagination['antal_items'] }} driftstörningar - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
                 @endif
-                    </span>
-            <div>
+                    </div>
+            <div class="mx-auto">
                 <span><a class="rh-pagination-link rh-pagination-link-previous" style="line-height: 3;" href="./?sida={{ $myPagination['first_page'] }}&oid={{ $oid }}&sid={{ $sid }}"><<</a></span>
                 <span><a class="rh-pagination-link" style="line-height: 3;" href="./?sida={{ $myPagination['prev_page'] }}&oid={{ $oid }}&sid={{ $sid }}"><</a></span>
                 @foreach ($myPagination['start_end'] as $start_end)
