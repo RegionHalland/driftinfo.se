@@ -52,8 +52,8 @@
     <div class="mx-auto" style="max-width: 1440px;">
 
 
-        <div class="rh-xpad-B" style="position:relative; top: -3em;background-color: #F4F4F4; border:1px solid grey">
-            <div class="rh-tabs">
+        <div class="m1" style="position:relative; top: -3.6em;background-color: #F4F4F4; border:1px solid grey">
+            <div class="rh-tabs" style="height: 3.6em;">
                 <ul class="rh-tabs-list">
                     <li class="rh-tabs-list-item">
                         <p class="rh-tabs-list-item-text">
@@ -150,7 +150,7 @@
                 @endswitch
             </span>
 
-            <div class="m2 p2" style="background: white; border: 1px solid grey">
+            <div class="m2 rh-xpad-B" style="background: white; border: 1px solid grey">
                 
                 @php($myItems = get_region_halland_drift_info($type))
                 @php($myPagination = get_region_halland_array_pagination(count($myItems),10,'sida'))
@@ -179,7 +179,7 @@
 
                     <div class="">
                         <?php while ($i < $myPagination['end_item']) { ?>
-                        <div class="m2 p2" style="border-left: 8px solid #61A2D8; border-top: 1px solid grey; border-bottom: 1px solid grey; border-right: 1px solid grey;">
+                        <div class="p2 my2" style="border-left: 8px solid #61A2D8; border-top: 1px solid grey; border-bottom: 1px solid grey; border-right: 1px solid grey;">
 
 
                             <div class="clearfix">
