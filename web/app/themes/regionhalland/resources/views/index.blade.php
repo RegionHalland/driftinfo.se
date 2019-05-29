@@ -51,106 +51,100 @@
 
     <div class="mx-auto" style="max-width: 1440px;">
 
-
-        <div class="m1" style="position:relative; top: -3.6em;background-color: #F4F4F4; border:1px solid grey">
-            <div class="rh-tabs" style="height: 3.6em;">
-                <ul class="rh-tabs-list">
-                    <li class="rh-tabs-list-item">
+        <div class="" style="position:relative; top: -3.8em;">
+            <div class="rh-tabs">
+                <ul class="rh-tabs-list" style="height: 3.6em;">
+                    <li class="rh-tabs-list-item @if($sid == 3) rh-tabs-list-item--active @endif">
                         <p class="rh-tabs-list-item-text">
-                            @if($sid == 1)
-                                <a href="./?oid={{$oid}}&sid=1" class="">Pågående</a>
-                            @else
-                                <a href="./?oid={{$oid}}&sid=1" class="">Pågående</a>
-                            @endif
+                            <a href="./?oid={{$oid}}&sid=3" class="">
+                                Avslutade
+                            </a>
                         </p>
                     </li>
-                    <li class="rh-tabs-list-item">
+                    <li class="rh-tabs-list-item @if($sid == 1) rh-tabs-list-item--active @endif">
                         <p class="rh-tabs-list-item-text">
-                            @if($sid == 2)
-                                <a href="./?oid={{$oid}}&sid=2" class="">Kommande</a>
-                            @else
-                                <a href="./?oid={{$oid}}&sid=2" class="">Kommande</a>
-                            @endif
+                            <a href="./?oid={{$oid}}&sid=1">
+                                Pågående
+                            </a>
                         </p>
-
-
                     </li>
-                    <li class="rh-tabs-list-item">
+                    <li class="rh-tabs-list-item @if($sid == 2) rh-tabs-list-item--active @endif">
                         <p class="rh-tabs-list-item-text">
-                            @if($sid == 3)
-                                <a href="./?oid={{$oid}}&sid=3" class="">Avslutade</a>
-                            @else
-                                <a href="./?oid={{$oid}}&sid=3" class="">Avslutade</a>
-                            @endif
+                            <a href="./?oid={{$oid}}&sid=2" class="">
+                                Kommande
+                            </a>
                         </p>
-
                     </li>
                 </ul>
             </div>
 
-            {{-- Fliknavigation nivå 2 - Alla --}}
-            @if($oid == 1)
-                <a href="./?oid=1&sid={{$sid}}" class="">Alla</a>
-            @else
-                <a href="./?oid=1&sid={{$sid}}" class="">Alla</a>
-            @endif
+            {{-- Fliknavigation nivå 2 --}}
+            <div class="rh-tabs">
+                <ul class="rh-tabs-list">
 
-            <span class="rh-labels">
-            @switch($sid)
-                @case(1)
-                    {{ $myNumbers['alla-pagaende'] }}
-                    @break
-                @case(2)
-                    {{ $myNumbers['alla-kommande'] }}
-                    @break
-                @case(3)
-                    {{ $myNumbers['alla-avslutade'] }}
-                    @break
-            @endswitch
-            </span>
+                    {{-- Fliknavigation nivå 2 - Alla --}}
+                    <li class="rh-tabs-list-item @if($oid == 1) rh-tabs-list-item--active @endif">
+                        <p class="rh-tabs-list-item-text">
+                            <a href="./?oid=1&sid={{$sid}}" class="">Alla</a>
+                            <span class="rh-labels">
+                                @switch($sid)
+                                    @case(1)
+                                        {{ $myNumbers['alla-pagaende'] }}
+                                    @break
+                                    @case(2)
+                                        {{ $myNumbers['alla-kommande'] }}
+                                    @break
+                                    @case(3)
+                                        {{ $myNumbers['alla-avslutade'] }}
+                                    @break
+                                @endswitch
+                            </span>
+                        </p>
+                    </li>
 
-            {{-- Fliknavigation nivå 2 - IT/telefoni --}}
-            @if($oid == 2)
-                <a href="./?oid=2&sid={{$sid}}" class="">IT/Telefoni</a>
-            @else
-                <a href="./?oid=2&sid={{$sid}}" class="">IT/Telefoni</a>
-            @endif
-            <span class="rh-labels">
-            @switch($sid)
-                    @case(1)
-                    {{ $myNumbers['it-telefoni-pagaende'] }}
-                    @break
-                    @case(2)
-                    {{ $myNumbers['it-telefoni-kommande'] }}
-                    @break
-                    @case(3)
-                    {{ $myNumbers['it-telefoni-avslutade'] }}
-                    @break
-                @endswitch
-            </span>
+                    {{-- Fliknavigation nivå 2 - IT/telefoni --}}
+                    <li class="rh-tabs-list-item @if($oid == 2) rh-tabs-list-item--active @endif">
+                        <p class="rh-tabs-list-item-text">
+                            <a href="./?oid=2&sid={{$sid}}" class="">IT/Telefoni</a>
+                            <span class="rh-labels">
+                                @switch($sid)
+                                    @case(1)
+                                        {{ $myNumbers['it-telefoni-pagaende'] }}
+                                    @break
+                                    @case(2)
+                                        {{ $myNumbers['it-telefoni-kommande'] }}
+                                    @break
+                                    @case(3)
+                                        {{ $myNumbers['it-telefoni-avslutade'] }}
+                                    @break
+                                @endswitch
+                            </span>
+                        </p>
+                    </li>
 
+                    {{-- Fliknavigation nivå 2 - Fastighet --}}
+                    <li class="rh-tabs-list-item @if($oid == 3) rh-tabs-list-item--active @endif">
+                        <p class="rh-tabs-list-item-text">
+                            <a href="./?oid=3&sid={{$sid}}" class="">Fastighet</a>
+                            <span class="rh-labels">
+                                @switch($sid)
+                                    @case(1)
+                                        {{ $myNumbers['fastighet-pagaende'] }}
+                                    @break
+                                    @case(2)
+                                        {{ $myNumbers['fastighet-kommande'] }}
+                                    @break
+                                    @case(3)
+                                        {{ $myNumbers['fastighet-avslutade'] }}
+                                    @break
+                                @endswitch
+                            </span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
 
-            {{-- Fliknavigation nivå 2 - Fastighet --}}
-            @if($oid == 3)
-                <a href="./?oid=3&sid={{$sid}}" class="">Fastighet</a>
-            @else
-                <a href="./?oid=3&sid={{$sid}}" class="">Fastighet</a>
-            @endif
-            <span class="rh-labels">
-            @switch($sid)
-                    @case(1)
-                    {{ $myNumbers['fastighet-pagaende'] }}
-                    @break
-                    @case(2)
-                    {{ $myNumbers['fastighet-kommande'] }}
-                    @break
-                    @case(3)
-                    {{ $myNumbers['fastighet-avslutade'] }}
-                    @break
-                @endswitch
-            </span>
-
-            <div class="m2 rh-xpad-B" style="background: white; border: 1px solid grey">
+            <div class="" style="background: white;">
                 
                 @php($myItems = get_region_halland_drift_info($type))
                 @php($myPagination = get_region_halland_array_pagination(count($myItems),10,'sida'))
@@ -159,7 +153,7 @@
                 @if($myPagination['antal_items'] > 0)
 
 
-                    <header class="clearfix m2 p2 hidden-sm">
+                    <header class="clearfix m2 hidden-sm">
                         <div class="col col-12 md-col-4">
                             <strong>Information</strong>
                         </div>
@@ -177,9 +171,9 @@
                         </div>
                     </header>
 
-                    <div class="">
+                    <div class="p1">
                         <?php while ($i < $myPagination['end_item']) { ?>
-                        <div class="p2 my2" style="border-left: 8px solid #61A2D8; border-top: 1px solid grey; border-bottom: 1px solid grey; border-right: 1px solid grey;">
+                        <div class="p2 my2" style="border-left: 8px solid #61A2D8; ">
 
 
                             <div class="clearfix">
@@ -201,7 +195,7 @@
                                     <p>{!! get_region_halland_drift_fix_date($myItems[$i]->end_time) !!}</p>
                                 </div>
                                 <div class="col col-12 md-col-2">
-                                   .
+
                                 </div>
                                 <div class="col col-12">
                                     <p class="rh-labels">{!! $myItems[$i]->status_name !!}</p>
@@ -212,11 +206,11 @@
                                 <div class="col col-12 p2" style="background: #F4F4F4; border:1px solid #D1D1D1;">
                                     <p>{!! $myItems[$i]->post_content !!}</p>
                                 </div>
-                                @if ($myItems[$i]->all_follow_up)
+                                @if ($myItems[$i]->follow_up)
                                     <div class="">
                                         <h5>Uppföljning</h5>
                                     </div>
-                                    @foreach ($myItems[$i]->all_follow_up as $followUp)
+                                    @foreach ($myItems[$i]->follow_up as $followUp)
                                     <div class="">
                                         <p>{{ $followUp['rubrik'] }}</p>
                                         <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p>
@@ -267,11 +261,11 @@
                             <div class="">
                                 <p>{!! $myItem->post_content !!}</p>
                             </div>
-                            @if ($myItem->all_follow_up)
+                            @if ($myItem->follow_up)
                                 <div class="">
                                     <h5>Uppföljning</h5>
                                 </div>
-                                @foreach ($myItem->all_follow_up as $followUp)
+                                @foreach ($myItem->follow_up as $followUp)
                                 <div class="">
                                     <p>{{ $followUp['rubrik'] }}</p>
                                     <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p>
@@ -294,8 +288,8 @@
                 @endif
                     </div>
             <div class="mx-auto">
-                <span><a class="rh-pagination-link rh-pagination-link-previous" style="line-height: 3;" href="./?sida={{ $myPagination['first_page'] }}&oid={{ $oid }}&sid={{ $sid }}"><<</a></span>
-                <span><a class="rh-pagination-link" style="line-height: 3;" href="./?sida={{ $myPagination['prev_page'] }}&oid={{ $oid }}&sid={{ $sid }}"><</a></span>
+                <span><a class="rh-pagination-link rh-pagination-link-previous" style="line-height: 3;" href="./?sida={{ $myPagination['first_page'] }}&oid={{ $oid }}&sid={{ $sid }}"></a></span>
+                <span><a class="rh-pagination-link" style="line-height: 3;" href="./?sida={{ $myPagination['prev_page'] }}&oid={{ $oid }}&sid={{ $sid }}"></a></span>
                 @foreach ($myPagination['start_end'] as $start_end)
                     @if($myPagination['current_page'] == $start_end['number'])
                         <strong><a class="rh-pagination-link" style="line-height: 3;background-color: #FCAF15;" href="./?sida={{ $start_end['number'] }}&oid={{ $oid }}&sid={{ $sid }}">{!! $start_end['number'] !!}</a></strong>

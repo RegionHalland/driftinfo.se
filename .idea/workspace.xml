@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abe4f568-37b0-4ae5-83b5-af15b4864f47" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/styleguide5.0.0/css/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/styleguide5.0.0/css/components.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/styleguide5.0.0/js/components.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/styleguide5.0.0/js/components.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,45 +17,45 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="54" column="67" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
+            <state relative-caret-position="992">
+              <caret line="124" column="40" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
               <folding>
-                <element signature="e#1114#1140#0#HTML" expanded="true" />
-                <element signature="e#3433#3482#0#HTML" expanded="true" />
-                <element signature="e#4765#4893#0#HTML" expanded="true" />
-                <element signature="e#6706#6760#0#HTML" expanded="true" />
-                <element signature="e#7827#7867#0#HTML" expanded="true" />
-                <element signature="e#10713#10753#0#HTML" expanded="true" />
-                <element signature="e#10944#10984#0#HTML" expanded="true" />
+                <element signature="e#1068#1094#0#HTML" expanded="true" />
+                <element signature="e#1122#1209#0#HTML" expanded="true" />
+                <element signature="e#1261#1283#0#HTML" expanded="true" />
+                <element signature="e#2608#2629#0#HTML" expanded="true" />
+                <element signature="e#3589#3610#0#HTML" expanded="true" />
+                <element signature="e#4595#4616#0#HTML" expanded="true" />
+                <element signature="e#4885#4934#0#HTML" expanded="true" />
+                <element signature="e#6230#6358#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/layouts/app.blade.php">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/head.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="483">
+              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/index.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="138">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -105,10 +108,10 @@
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/template-telefoni-avslutad.blade.php" />
         <option value="$PROJECT_DIR$/web/app/plugins/region-halland-acf-drift-info/region_halland_acf_drift_info.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/head.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/footer.blade.php" />
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/header.blade.php" />
+        <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/head.blade.php" />
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php" />
       </list>
     </option>
@@ -127,10 +130,9 @@
       <path value="$PROJECT_DIR$/vendor/philippbaschke/acf-pro-installer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-43" />
-    <option name="y" value="56" />
-    <option name="width" value="2560" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="419" />
+    <option name="width" value="1957" />
     <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -139,6 +141,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,7 +233,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,7 +275,8 @@
       <workItem from="1548835249014" duration="8995000" />
       <workItem from="1549029942082" duration="10640000" />
       <workItem from="1549381970528" duration="789000" />
-      <workItem from="1558961383565" duration="13182000" />
+      <workItem from="1558961383565" duration="16560000" />
+      <workItem from="1559119929636" duration="7586000" />
     </task>
     <task id="LOCAL-00001" summary="Justeringar enligt #55">
       <created>1548834767352</created>
@@ -293,13 +296,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77377000" />
+    <option name="totallyTimeSpent" value="88341000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-43" y="56" width="2560" height="1440" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1654705" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1670654" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -404,13 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/head.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="98" selection-start-line="22" selection-start-column="98" selection-end-line="22" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -430,29 +426,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="138">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="54" column="67" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
+        <state relative-caret-position="992">
+          <caret line="124" column="40" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
           <folding>
-            <element signature="e#1114#1140#0#HTML" expanded="true" />
-            <element signature="e#3433#3482#0#HTML" expanded="true" />
-            <element signature="e#4765#4893#0#HTML" expanded="true" />
-            <element signature="e#6706#6760#0#HTML" expanded="true" />
-            <element signature="e#7827#7867#0#HTML" expanded="true" />
-            <element signature="e#10713#10753#0#HTML" expanded="true" />
-            <element signature="e#10944#10984#0#HTML" expanded="true" />
+            <element signature="e#1068#1094#0#HTML" expanded="true" />
+            <element signature="e#1122#1209#0#HTML" expanded="true" />
+            <element signature="e#1261#1283#0#HTML" expanded="true" />
+            <element signature="e#2608#2629#0#HTML" expanded="true" />
+            <element signature="e#3589#3610#0#HTML" expanded="true" />
+            <element signature="e#4595#4616#0#HTML" expanded="true" />
+            <element signature="e#4885#4934#0#HTML" expanded="true" />
+            <element signature="e#6230#6358#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
