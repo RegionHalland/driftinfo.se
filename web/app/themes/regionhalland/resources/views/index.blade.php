@@ -153,7 +153,7 @@
                 @if($myPagination['antal_items'] > 0)
 
 
-                    <header class="clearfix m2 hidden-sm" style="border-left:8px solid transparent">
+                    {{-- <header class="clearfix m2 hidden-sm" style="border-left:8px solid transparent">
                         <div class="col col-12 md-col-4">
                             <strong>Information</strong>
                         </div>
@@ -169,11 +169,11 @@
                         <div class="col col-12 md-col-2">
                             <strong>Uppdateringar</strong>
                         </div>
-                    </header>
+                    </header>--}}
 
                     <div class="p1">
                         <?php while ($i < $myPagination['end_item']) { ?>
-                        <div class="p2 my2" style="border-left: 8px solid #61A2D8; ">
+                        <div class="p2 my2 rh-card">
 
 
                             <div class="clearfix">
@@ -199,7 +199,8 @@
                                     <p>{!! get_region_halland_drift_fix_date($myItems[$i]->end_time) !!}</p>
                                 </div>
                                 <div class="col col-12 md-col-2">
-                                    {{ count($myItems[$i]->follow_up) }}
+                                    <strong>Uppdateringar</strong>
+                                    <p>{{ count($myItems[$i]->follow_up) }}</p>
                                 </div>
 
                                 <div class="col col-12">
