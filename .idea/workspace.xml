@@ -18,8 +18,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+            <state relative-caret-position="349">
+              <caret line="201" column="38" lean-forward="true" selection-start-line="201" selection-start-column="38" selection-end-line="201" selection-end-column="38" />
+              <folding>
+                <element signature="e#8707#8761#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -273,7 +276,7 @@
       <workItem from="1549381970528" duration="789000" />
       <workItem from="1558961383565" duration="16560000" />
       <workItem from="1559119929636" duration="9563000" />
-      <workItem from="1559287470344" duration="4418000" />
+      <workItem from="1559287470344" duration="6031000" />
     </task>
     <task id="LOCAL-00001" summary="Justeringar enligt #55">
       <created>1548834767352</created>
@@ -293,7 +296,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94736000" />
+    <option name="totallyTimeSpent" value="96349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-397" y="0" width="2814" height="1440" extended-state="0" />
@@ -446,8 +449,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+        <state relative-caret-position="349">
+          <caret line="201" column="38" lean-forward="true" selection-start-line="201" selection-start-column="38" selection-end-line="201" selection-end-column="38" />
+          <folding>
+            <element signature="e#8707#8761#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

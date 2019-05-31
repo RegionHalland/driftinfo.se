@@ -85,8 +85,8 @@
                     {{-- Fliknavigation nivå 2 - Fliken "Alla" --}}
                 <div class="rh-buttongroup__button rh-buttongroup__button--left @if($oid == 1) rh-buttongroup__button--active @endif">
 
-                            <a class="rh-buttongroup__button-text" href="./?oid=1&sid={{$sid}}" class="">Alla</a>
-                            {{--<span class="rh-labels">
+                            <a class="rh-buttongroup__button-text" href="./?oid=1&sid={{$sid}}">Alla</a>
+                            <span class="rh-labels">
                                 @switch($sid)
                                     @case(1)
                                         {{ $myNumbers['alla-pagaende'] }}
@@ -98,15 +98,15 @@
                                         {{ $myNumbers['alla-avslutade'] }}
                                     @break
                                 @endswitch
-                            </span>--}}
+                            </span>
 
                     </div>
 
                     {{-- Fliknavigation nivå 2 - Fliken "IT/telefoni" --}}
                 <div class="rh-buttongroup__button @if($oid == 2) rh-buttongroup__button--active @endif">
 
-                            <a class="rh-buttongroup__button-text" href="./?oid=2&sid={{$sid}}" class="">IT/Telefoni</a>
-                            {{--<span class="rh-labels">
+                            <a class="rh-buttongroup__button-text" href="./?oid=2&sid={{$sid}}">IT/Telefoni</a>
+                            <span class="rh-labels">
                                 @switch($sid)
                                     @case(1)
                                         {{ $myNumbers['it-telefoni-pagaende'] }}
@@ -118,15 +118,15 @@
                                         {{ $myNumbers['it-telefoni-avslutade'] }}
                                     @break
                                 @endswitch
-                            </span>--}}
+                            </span>
 
                     </div>
 
                     {{-- Fliknavigation nivå 2 - Fliken "Fastighet" --}}
                     <div class="rh-buttongroup__button rh-buttongroup__button--right @if($oid == 3) rh-buttongroup__button--active @endif">
 
-                            <a class="rh-buttongroup__button-text" href="./?oid=3&sid={{$sid}}" class="">Fastighet</a>
-                            {{-- <span class="rh-labels">
+                            <a class="rh-buttongroup__button-text" href="./?oid=3&sid={{$sid}}">Fastighet</a>
+                            <span class="rh-labels">
                                 @switch($sid)
                                     @case(1)
                                         {{ $myNumbers['fastighet-pagaende'] }}
@@ -138,7 +138,7 @@
                                         {{ $myNumbers['fastighet-avslutade'] }}
                                     @break
                                 @endswitch
-                            </span>--}}
+                            </span>
 
                     </div>
 
@@ -153,7 +153,7 @@
                 @if($myPagination['antal_items'] > 0)
 
 
-                    <header class="clearfix m2 hidden-sm">
+                    <header class="clearfix m2 hidden-sm" style="border-left:8px solid transparent">
                         <div class="col col-12 md-col-4">
                             <strong>Information</strong>
                         </div>
@@ -180,41 +180,42 @@
                                 <div class="col col-12 md-col-4">
                                     <h3 class="">{!! $myItems[$i]->post_title !!}</h3>
                                     @if($myItems[$i]->date_updated)
-                                        <p class="">Uppdaterad: {!! get_region_halland_drift_fix_date($myItems[$i]->date_updated) !!}</p>
+                                        Senast uppdaterad:<p class=""> {!! get_region_halland_drift_fix_date($myItems[$i]->date_updated) !!}</p> {{-- TODO: Does this take "uppföljning" into account? --}}
                                     @endif
+                                    <p class="rh-labels mb2">{!! $myItems[$i]->status_name !!}</p>
                                 </div>
                                 <div class="col col-12 md-col-2">
                                     @foreach ($myItems[$i]->omrade as $omrade)
+                                        <strong>Område</strong>
                                         <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
                                     @endforeach
                                 </div>
                                 <div class="col col-12 md-col-2">
+                                    <strong>Start</strong>
                                     <p>{!! get_region_halland_drift_fix_date($myItems[$i]->start_time) !!}</p>
                                 </div>
                                 <div class="col col-12 md-col-2">
+                                    <strong>Beräknat avslut</strong>
                                     <p>{!! get_region_halland_drift_fix_date($myItems[$i]->end_time) !!}</p>
                                 </div>
                                 <div class="col col-12 md-col-2">
+                                    {{ count($myItems[$i]->follow_up) }}
+                                </div>
 
-                                </div>
-                                <div class="col col-12">
-                                    <p class="rh-labels">{!! $myItems[$i]->status_name !!}</p>
-                                </div>
                                 <div class="col col-12">
                                     <strong>Beskrivning:</strong>
                                 </div>
-                                <div class="col col-12 p2" style="background: #F4F4F4; border:1px solid #D1D1D1;">
+                                <div class="col col-12 p2 my2" style="background: #F4F4F4; border:1px solid #D1D1D1;">
                                     <p>{!! $myItems[$i]->post_content !!}</p>
                                 </div>
                                 @if ($myItems[$i]->follow_up)
-                                    <div class="">
-                                        <h5>Uppföljning</h5>
-                                    </div>
+
                                     @foreach ($myItems[$i]->follow_up as $followUp)
-                                    <div class="">
-                                        <p>{{ $followUp['rubrik'] }}</p>
-                                        <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p>
-                                        <p>{{ $followUp['content'] }}</p><br>
+                                    <div class="col col-12">
+                                        <p><strong>Uppdatering:</strong><br>
+                                        {{--<p>{{ $followUp['rubrik'] }}</p> --}}
+                                        {{-- <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p> --}}
+                                        {{ $followUp['content'] }}</p>
                                     </div>
                                     @endforeach            
                                 @endif
