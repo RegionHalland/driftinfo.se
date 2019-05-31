@@ -185,10 +185,14 @@
                                     <p class="rh-labels mb2">{!! $myItems[$i]->status_name !!}</p>
                                 </div>
                                 <div class="col col-12 md-col-2">
-                                    @foreach ($myItems[$i]->omrade as $omrade)
-                                        <strong>Område</strong>
-                                        <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
-                                    @endforeach
+                                    @if($myItems[$i]->omrade)
+                                        @foreach ($myItems[$i]->omrade as $omrade)
+                                            <strong>Område</strong>
+                                            <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
+                                        @endforeach
+                                    @else
+                                        Ej angivet
+                                    @endif
                                 </div>
                                 <div class="col col-12 md-col-2">
                                     <strong>Start</strong>
