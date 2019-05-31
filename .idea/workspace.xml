@@ -18,10 +18,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="248" column="32" selection-start-line="248" selection-start-column="32" selection-end-line="248" selection-end-column="32" />
+            <state relative-caret-position="545">
+              <caret line="245" column="32" lean-forward="true" selection-start-line="245" selection-start-column="32" selection-end-line="245" selection-end-column="32" />
               <folding>
-                <element signature="e#8931#8985#0#HTML" expanded="true" />
+                <element signature="e#5581#5607#0#HTML" expanded="true" />
+                <element signature="e#9085#9139#0#HTML" expanded="true" />
+                <element signature="e#10414#10454#0#HTML" expanded="true" />
+                <element signature="e#10642#10682#0#HTML" expanded="true" />
+                <element signature="e#10825#10865#0#HTML" expanded="true" />
+                <element signature="e#11012#11052#0#HTML" expanded="true" />
+                <element signature="e#11199#11239#0#HTML" expanded="true" />
+                <element signature="e#11386#11426#0#HTML" expanded="true" />
+                <element signature="e#11573#11613#0#HTML" expanded="true" />
+                <element signature="e#11760#11800#0#HTML" expanded="true" />
+                <element signature="e#11947#11987#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,9 +107,9 @@
       <path value="$PROJECT_DIR$/vendor/philippbaschke/acf-pro-installer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="419" />
-    <option name="width" value="1957" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="71" />
+    <option name="width" value="2560" />
     <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -244,7 +254,7 @@
       <workItem from="1549381970528" duration="789000" />
       <workItem from="1558961383565" duration="16560000" />
       <workItem from="1559119929636" duration="9563000" />
-      <workItem from="1559287470344" duration="8127000" />
+      <workItem from="1559287470344" duration="9383000" />
     </task>
     <task id="LOCAL-00001" summary="Justeringar enligt #55">
       <created>1548834767352</created>
@@ -264,10 +274,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98445000" />
+    <option name="totallyTimeSpent" value="99701000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
+    <frame x="0" y="71" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16866028" />
@@ -417,10 +427,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="248" column="32" selection-start-line="248" selection-start-column="32" selection-end-line="248" selection-end-column="32" />
+        <state relative-caret-position="545">
+          <caret line="245" column="32" lean-forward="true" selection-start-line="245" selection-start-column="32" selection-end-line="245" selection-end-column="32" />
           <folding>
-            <element signature="e#8931#8985#0#HTML" expanded="true" />
+            <element signature="e#5581#5607#0#HTML" expanded="true" />
+            <element signature="e#9085#9139#0#HTML" expanded="true" />
+            <element signature="e#10414#10454#0#HTML" expanded="true" />
+            <element signature="e#10642#10682#0#HTML" expanded="true" />
+            <element signature="e#10825#10865#0#HTML" expanded="true" />
+            <element signature="e#11012#11052#0#HTML" expanded="true" />
+            <element signature="e#11199#11239#0#HTML" expanded="true" />
+            <element signature="e#11386#11426#0#HTML" expanded="true" />
+            <element signature="e#11573#11613#0#HTML" expanded="true" />
+            <element signature="e#11760#11800#0#HTML" expanded="true" />
+            <element signature="e#11947#11987#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
