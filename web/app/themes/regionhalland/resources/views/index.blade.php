@@ -244,9 +244,13 @@
                                 @endif
                             </div>
                             <div class="">
-                                @foreach ($myItem->omrade as $omrade)
-                                    <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
-                                @endforeach
+                                @if($myItem->omrade)
+                                    @foreach ($myItem->omrade as $omrade)
+                                        <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
+                                    @endforeach
+                                @else
+                                    Ej angivet
+                                @endif
                             </div>
                             <div class="">
                                 <p>{!! get_region_halland_drift_fix_date($myItem->start_time) !!}</p>

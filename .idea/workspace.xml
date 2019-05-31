@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="abe4f568-37b0-4ae5-83b5-af15b4864f47" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/styleguide5.0.0/css/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/styleguide5.0.0/css/components.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,10 +18,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="158" column="28" selection-start-line="158" selection-start-column="28" selection-end-line="158" selection-end-column="28" />
+            <state relative-caret-position="589">
+              <caret line="248" column="32" selection-start-line="248" selection-start-column="32" selection-end-line="248" selection-end-column="32" />
               <folding>
-                <element signature="e#5959#5994#0#HTML" expanded="true" />
                 <element signature="e#8931#8985#0#HTML" expanded="true" />
               </folding>
             </state>
@@ -246,7 +244,7 @@
       <workItem from="1549381970528" duration="789000" />
       <workItem from="1558961383565" duration="16560000" />
       <workItem from="1559119929636" duration="9563000" />
-      <workItem from="1559287470344" duration="7741000" />
+      <workItem from="1559287470344" duration="8127000" />
     </task>
     <task id="LOCAL-00001" summary="Justeringar enligt #55">
       <created>1548834767352</created>
@@ -266,7 +264,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98059000" />
+    <option name="totallyTimeSpent" value="98445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -419,10 +417,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="158" column="28" selection-start-line="158" selection-start-column="28" selection-end-line="158" selection-end-column="28" />
+        <state relative-caret-position="589">
+          <caret line="248" column="32" selection-start-line="248" selection-start-column="32" selection-end-line="248" selection-end-column="32" />
           <folding>
-            <element signature="e#5959#5994#0#HTML" expanded="true" />
             <element signature="e#8931#8985#0#HTML" expanded="true" />
           </folding>
         </state>
