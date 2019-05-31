@@ -78,6 +78,7 @@
     "roots/wp-config": "1.0.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/admin-menu-editor": "1.8.5",
+    "wpackagist-plugin/wp-migrate-db": "1.0.10",
     "regionhalland/region-halland-mobile-detect": "1.0.0",
     "regionhalland/region-halland-acf-add-theme-subpage": "1.0.0",
     "regionhalland/region-halland-acf-cookie-notice": "1.0.0",
