@@ -232,13 +232,13 @@
                 @else
                     @switch ($type)
                         @case(1)
-                            <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga driftstörningar inom detta urval</h2>
+                            <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga pågående driftstörningar</h2>
                         @break
                         @case(2)
-                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga driftstörningar inoasdf </h2>
+                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga pågående driftstörningar inom IT/tele</h2>
                         @break
                         @case(3)
-                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga driftstörningar inoasdf </h2>
+                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga pågående driftstörningar inom fastighet</h2>
                         @break
                         @case(4)
                         <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga kommande driftstörningar</h2>
