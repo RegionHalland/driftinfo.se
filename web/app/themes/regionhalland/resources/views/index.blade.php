@@ -244,7 +244,7 @@
                                 @endif
                             </div>
                             <div class="">
-                                @if($myItem->omrade)
+                                @if(isset($myItem->omrade))
                                     @foreach ($myItem->omrade as $omrade)
                                         <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
                                     @endforeach
