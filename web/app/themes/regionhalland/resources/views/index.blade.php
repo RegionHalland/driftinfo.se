@@ -51,7 +51,7 @@
 
     <div class="mx-auto" style="max-width: 1440px;">
 
-        <div class="" style="position:relative; top: -3.8em;">
+        <div class="" style="position:relative; top: -3.6em;">
             <div class="rh-tabs">
                 <ul class="rh-tabs-list" style="height: 3.6em;">
                     <li class="rh-tabs-list-item @if($sid == 3) rh-tabs-list-item--active @endif">
@@ -78,15 +78,15 @@
                 </ul>
             </div>
 
-            {{-- Fliknavigation nivå 2 --}}
-            <div class="rh-tabs">
-                <ul class="rh-tabs-list">
+            {{-- Fliknavigation nivå 2 - container --}}
+            <div class="clearfix mt3 mb2" style="display: flex; justify-content: center;">
 
-                    {{-- Fliknavigation nivå 2 - Alla --}}
-                    <li class="rh-tabs-list-item @if($oid == 1) rh-tabs-list-item--active @endif">
-                        <p class="rh-tabs-list-item-text">
+
+                    {{-- Fliknavigation nivå 2 - Fliken "Alla" --}}
+                <div class="col col-3 md-col-1" style="border-left: 1px solid grey; border-bottom: 1px solid grey; border-top:1px solid grey; border-right:1px solid grey; padding:1ex;color:white; border-top-left-radius: 0.5em; border-bottom-left-radius: 0.5em;@if($oid == 1) background: #F4F4F4; @else background:#E4E4E4;  @endif">
+
                             <a href="./?oid=1&sid={{$sid}}" class="">Alla</a>
-                            <span class="rh-labels">
+                            {{--<span class="rh-labels">
                                 @switch($sid)
                                     @case(1)
                                         {{ $myNumbers['alla-pagaende'] }}
@@ -98,15 +98,15 @@
                                         {{ $myNumbers['alla-avslutade'] }}
                                     @break
                                 @endswitch
-                            </span>
-                        </p>
-                    </li>
+                            </span>--}}
 
-                    {{-- Fliknavigation nivå 2 - IT/telefoni --}}
-                    <li class="rh-tabs-list-item @if($oid == 2) rh-tabs-list-item--active @endif">
-                        <p class="rh-tabs-list-item-text">
+                    </div>
+
+                    {{-- Fliknavigation nivå 2 - Fliken "IT/telefoni" --}}
+                <div class="col col-3 md-col-1" style="border-top:1px solid grey; border-bottom: 1px solid grey; padding:1ex;color:white; @if($oid == 2) background: #F4F4F4; @else background:#E4E4E4; @endif">
+
                             <a href="./?oid=2&sid={{$sid}}" class="">IT/Telefoni</a>
-                            <span class="rh-labels">
+                            {{--<span class="rh-labels">
                                 @switch($sid)
                                     @case(1)
                                         {{ $myNumbers['it-telefoni-pagaende'] }}
@@ -118,15 +118,15 @@
                                         {{ $myNumbers['it-telefoni-avslutade'] }}
                                     @break
                                 @endswitch
-                            </span>
-                        </p>
-                    </li>
+                            </span>--}}
 
-                    {{-- Fliknavigation nivå 2 - Fastighet --}}
-                    <li class="rh-tabs-list-item @if($oid == 3) rh-tabs-list-item--active @endif">
-                        <p class="rh-tabs-list-item-text">
+                    </div>
+
+                    {{-- Fliknavigation nivå 2 - Fliken "Fastighet" --}}
+                    <div class="col col-3 md-col-1" style="border:1px solid grey; padding:1ex;color:white; border-bottom-right-radius: 0.5em; border-top-right-radius: 0.5em;@if($oid == 3) background: #F4F4F4; @else background:#E4E4E4;@endif">
+
                             <a href="./?oid=3&sid={{$sid}}" class="">Fastighet</a>
-                            <span class="rh-labels">
+                            {{-- <span class="rh-labels">
                                 @switch($sid)
                                     @case(1)
                                         {{ $myNumbers['fastighet-pagaende'] }}
@@ -138,10 +138,10 @@
                                         {{ $myNumbers['fastighet-avslutade'] }}
                                     @break
                                 @endswitch
-                            </span>
-                        </p>
-                    </li>
-                </ul>
+                            </span>--}}
+
+                    </div>
+
             </div>
 
             <div class="" style="background: white;">

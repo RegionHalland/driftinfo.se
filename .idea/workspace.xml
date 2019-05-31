@@ -4,8 +4,6 @@
     <list default="true" id="abe4f568-37b0-4ae5-83b5-af15b4864f47" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/styleguide5.0.0/css/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/styleguide5.0.0/css/components.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/styleguide5.0.0/js/components.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/styleguide5.0.0/js/components.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,17 +19,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="992">
-              <caret line="124" column="40" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
+            <state relative-caret-position="339">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
               <folding>
-                <element signature="e#1068#1094#0#HTML" expanded="true" />
-                <element signature="e#1122#1209#0#HTML" expanded="true" />
-                <element signature="e#1261#1283#0#HTML" expanded="true" />
-                <element signature="e#2608#2629#0#HTML" expanded="true" />
-                <element signature="e#3589#3610#0#HTML" expanded="true" />
-                <element signature="e#4595#4616#0#HTML" expanded="true" />
-                <element signature="e#4885#4934#0#HTML" expanded="true" />
-                <element signature="e#6230#6358#0#HTML" expanded="true" />
+                <element signature="e#2534#2746#0#HTML" expanded="true" />
+                <element signature="e#3697#3838#0#HTML" expanded="true" />
+                <element signature="e#4593#4775#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -276,7 +269,8 @@
       <workItem from="1549029942082" duration="10640000" />
       <workItem from="1549381970528" duration="789000" />
       <workItem from="1558961383565" duration="16560000" />
-      <workItem from="1559119929636" duration="7586000" />
+      <workItem from="1559119929636" duration="9563000" />
+      <workItem from="1559287470344" duration="1987000" />
     </task>
     <task id="LOCAL-00001" summary="Justeringar enligt #55">
       <created>1548834767352</created>
@@ -296,13 +290,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88341000" />
+    <option name="totallyTimeSpent" value="92305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1670654" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16866028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -424,10 +418,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/header.blade.php">
+    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="339">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="e#2534#2746#0#HTML" expanded="true" />
+            <element signature="e#3697#3838#0#HTML" expanded="true" />
+            <element signature="e#4593#4775#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -441,20 +440,10 @@
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/index.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="124" column="40" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
-          <folding>
-            <element signature="e#1068#1094#0#HTML" expanded="true" />
-            <element signature="e#1122#1209#0#HTML" expanded="true" />
-            <element signature="e#1261#1283#0#HTML" expanded="true" />
-            <element signature="e#2608#2629#0#HTML" expanded="true" />
-            <element signature="e#3589#3610#0#HTML" expanded="true" />
-            <element signature="e#4595#4616#0#HTML" expanded="true" />
-            <element signature="e#4885#4934#0#HTML" expanded="true" />
-            <element signature="e#6230#6358#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="138">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
