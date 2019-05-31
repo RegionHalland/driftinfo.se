@@ -79,13 +79,13 @@
             </div>
 
             {{-- Fliknavigation nivå 2 - container --}}
-            <div class="clearfix mt3 mb2" style="display: flex; justify-content: center;">
+            <div class="mt3 mb2 rh-buttongroup">
 
 
                     {{-- Fliknavigation nivå 2 - Fliken "Alla" --}}
-                <div class="col col-3 md-col-1" style="border-left: 1px solid grey; border-bottom: 1px solid grey; border-top:1px solid grey; border-right:1px solid grey; padding:1ex;color:white; border-top-left-radius: 0.5em; border-bottom-left-radius: 0.5em;@if($oid == 1) background: #F4F4F4; @else background:#E4E4E4;  @endif">
+                <div class="rh-buttongroup__button rh-buttongroup__button--left @if($oid == 1) rh-buttongroup__button--active @endif">
 
-                            <a href="./?oid=1&sid={{$sid}}" class="">Alla</a>
+                            <a class="rh-buttongroup__button-text" href="./?oid=1&sid={{$sid}}" class="">Alla</a>
                             {{--<span class="rh-labels">
                                 @switch($sid)
                                     @case(1)
@@ -103,9 +103,9 @@
                     </div>
 
                     {{-- Fliknavigation nivå 2 - Fliken "IT/telefoni" --}}
-                <div class="col col-3 md-col-1" style="border-top:1px solid grey; border-bottom: 1px solid grey; padding:1ex;color:white; @if($oid == 2) background: #F4F4F4; @else background:#E4E4E4; @endif">
+                <div class="rh-buttongroup__button @if($oid == 2) rh-buttongroup__button--active @endif">
 
-                            <a href="./?oid=2&sid={{$sid}}" class="">IT/Telefoni</a>
+                            <a class="rh-buttongroup__button-text" href="./?oid=2&sid={{$sid}}" class="">IT/Telefoni</a>
                             {{--<span class="rh-labels">
                                 @switch($sid)
                                     @case(1)
@@ -123,9 +123,9 @@
                     </div>
 
                     {{-- Fliknavigation nivå 2 - Fliken "Fastighet" --}}
-                    <div class="col col-3 md-col-1" style="border:1px solid grey; padding:1ex;color:white; border-bottom-right-radius: 0.5em; border-top-right-radius: 0.5em;@if($oid == 3) background: #F4F4F4; @else background:#E4E4E4;@endif">
+                    <div class="rh-buttongroup__button rh-buttongroup__button--right @if($oid == 3) rh-buttongroup__button--active @endif">
 
-                            <a href="./?oid=3&sid={{$sid}}" class="">Fastighet</a>
+                            <a class="rh-buttongroup__button-text" href="./?oid=3&sid={{$sid}}" class="">Fastighet</a>
                             {{-- <span class="rh-labels">
                                 @switch($sid)
                                     @case(1)
