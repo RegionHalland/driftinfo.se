@@ -191,7 +191,8 @@
                                             <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
                                         @endforeach
                                     @else
-                                        Ej angivet
+                                        <strong>Område</strong>
+                                        <p>Ej angivet</p>
                                     @endif
                                 </div>
                                 <div class="col col-12 md-col-2">
