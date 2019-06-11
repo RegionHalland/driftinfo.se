@@ -232,31 +232,31 @@
                 @else
                     @switch ($type)
                         @case(1)
-                            <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga pågående driftstörningar</h2>
+                            <h2 class="" style="border-bottom: 4px solid #004890">Det finns inga pågående driftstörningar</h2>
                         @break
                         @case(2)
-                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga pågående driftstörningar inom IT/tele</h2>
+                        <h2 class="" style="border-bottom: 4px solid #004890">Det finns inga pågående driftstörningar inom IT/tele</h2>
                         @break
                         @case(3)
-                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga pågående driftstörningar inom fastighet</h2>
+                        <h2 class="" style="border-bottom: 4px solid #004890">Det finns inga pågående driftstörningar inom fastighet</h2>
                         @break
                         @case(4)
-                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga kommande driftstörningar</h2>
+                        <h2 class="" style="border-bottom: 4px solid #004890">Det finns inga kommande driftstörningar</h2>
                         @break
                         @case(5)
-                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga kommande driftstörningar inom IT/telefoni </h2>
+                        <h2 class="" style="border-bottom: 4px solid #004890">Det finns inga kommande driftstörningar inom IT/telefoni </h2>
                         @break
                         @case(6)
-                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga kommande driftstörningar inom fastighet</h2>
+                        <h2 class="" style="border-bottom: 4px solid #004890">Det finns inga kommande driftstörningar inom fastighet</h2>
                         @break
                         @case(7)
-                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga avslutade driftstörningar</h2>
+                        <h2 class="" style="border-bottom: 4px solid #004890">Det finns inga avslutade driftstörningar</h2>
                         @break
                         @case(8)
-                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga avslutade driftstörningar inom IT/telefoni</h2>
+                        <h2 class="" style="border-bottom: 4px solid #004890">Det finns inga avslutade driftstörningar inom IT/telefoni</h2>
                         @break
                         @case(9)
-                        <h2 class="" style="border-bottom: 4px solid #378A30">Det finns inga avslutade driftstörningar inom fastighet</h2>
+                        <h2 class="" style="border-bottom: 4px solid #004890">Det finns inga avslutade driftstörningar inom fastighet</h2>
                         @break
                     @endswitch
 
@@ -319,17 +319,17 @@
             </div>
         @endif
 
-        @if($myPagination['antal_items'] > 0)
-            <div class="mx-auto">
-                        @if($myPagination['antal_items'] == 1)
-                    <h2 class="" style="border-bottom: 4px solid #378A30">{{ $myPagination['antal_items'] }} driftstörning - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
+        @if($myPagination['total_pages'] > 1)
+            <div style="display:flex; justify-content: center;">
+                @if($myPagination['antal_items'] == 1)
+                    <h2 class="h3" style="border-bottom: 4px solid #004890">{{ $myPagination['antal_items'] }} driftstörning - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
                 @else
-                    <h2 class="" style="border-bottom: 4px solid #378A30">{{ $myPagination['antal_items'] }} driftstörningar - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
+                    <h2 class="h3" style="border-bottom: 4px solid #004890">{{ $myPagination['antal_items'] }} driftstörningar - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
                 @endif
                     </div>
-            <div class="mx-auto">
-                <span><a class="rh-pagination-link rh-pagination-link-previous" style="line-height: 3;" href="./?sida={{ $myPagination['first_page'] }}&oid={{ $oid }}&sid={{ $sid }}"></a></span>
-                <span><a class="rh-pagination-link" style="line-height: 3;" href="./?sida={{ $myPagination['prev_page'] }}&oid={{ $oid }}&sid={{ $sid }}"></a></span>
+            <div style="display:flex; justify-content: center;">
+                <span><a class="rh-pagination-link rh-pagination-link-previous" style="line-height: 3;" href="./?sida={{ $myPagination['first_page'] }}&oid={{ $oid }}&sid={{ $sid }}"><<</a></span>
+                <span><a class="rh-pagination-link" style="line-height: 3;" href="./?sida={{ $myPagination['prev_page'] }}&oid={{ $oid }}&sid={{ $sid }}"><</a></span>
                 @foreach ($myPagination['start_end'] as $start_end)
                     @if($myPagination['current_page'] == $start_end['number'])
                         <strong><a class="rh-pagination-link" style="line-height: 3;background-color: #FCAF15;" href="./?sida={{ $start_end['number'] }}&oid={{ $oid }}&sid={{ $sid }}">{!! $start_end['number'] !!}</a></strong>
