@@ -50,17 +50,10 @@
     @php($myNumbers = get_region_halland_drift_info_get_numbers())
 
     <div class="mx-auto" style="max-width: 1440px;">
-
+        {{-- Fliknavigation nivå 1 --}}
         <div class="" style="position:relative; top: -3.6em;">
             <div class="rh-tabs">
                 <ul class="rh-tabs-list" style="height: 3.6em;">
-                    <li class="rh-tabs-list-item @if($sid == 3) rh-tabs-list-item--active @endif">
-                        <p class="rh-tabs-list-item-text">
-                            <a href="./?oid={{$oid}}&sid=3" class="">
-                                Avslutade
-                            </a>
-                        </p>
-                    </li>
                     <li class="rh-tabs-list-item @if($sid == 1) rh-tabs-list-item--active @endif">
                         <p class="rh-tabs-list-item-text">
                             <a href="./?oid={{$oid}}&sid=1">
@@ -75,14 +68,20 @@
                             </a>
                         </p>
                     </li>
+                    <li class="rh-tabs-list-item @if($sid == 3) rh-tabs-list-item--active @endif">
+                        <p class="rh-tabs-list-item-text">
+                            <a href="./?oid={{$oid}}&sid=3" class="">
+                                Avslutade
+                            </a>
+                        </p>
+                    </li>
                 </ul>
             </div>
 
             {{-- Fliknavigation nivå 2 - container --}}
             <div class="mt3 mb2 rh-buttongroup">
 
-
-                    {{-- Fliknavigation nivå 2 - Fliken "Alla" --}}
+                {{-- Fliknavigation nivå 2 - Fliken "Alla" --}}
                 <div class="rh-buttongroup__button rh-buttongroup__button--left @if($oid == 1) rh-buttongroup__button--active @endif">
 
                             <a class="rh-buttongroup__button-text" href="./?oid=1&sid={{$sid}}">Alla</a>
