@@ -83,7 +83,7 @@
     "regionhalland/region-halland-acf-add-theme-subpage": "1.0.0",
     "regionhalland/region-halland-acf-cookie-notice": "1.0.0",
     "regionhalland/region-halland-array-pagination": "1.0.1",
-    "regionhalland/region-halland-acf-drift-info": "2.0.1"
+    "regionhalland/region-halland-acf-drift-info": "2.1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
