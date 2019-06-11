@@ -20,7 +20,6 @@
                 <li><a class="rh-link--navigation" href="https://www.regionhalland.se">Regionhalland.se</a></li>
                 <li><a class="rh-link--navigation" href="https://vardgivare.regionhalland.se">Vardgivare.regionhalland.se</a></li>
                 <li><a class="rh-link--navigation" href="https://intra.regionhalland.se">Intra.regionhalland.se</a></li>
-                <li><a class="rh-link--navigation" href="https://www.hlt.se">Hallandstrafiken</a></li>
             </ul>
         </div>
         <div class="left-align col col-12 sm-col-12 md-col-4 lg-col-4">
