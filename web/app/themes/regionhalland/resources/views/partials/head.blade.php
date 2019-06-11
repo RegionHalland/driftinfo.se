@@ -14,12 +14,7 @@
 	<meta name="msapplication-TileColor" content="#ffffff" />
 	<meta name="msapplication-config" href="{!! env('WP_HOME') !!}/include/favicons/browserconfig.xml" />
 	<meta name="theme-color" content="#ffffff" />
-	@php($myPostType = get_post_type())
-	@if($myPostType == 'page')
-		<title>{{ $post->post_title }} - Driftinfo</title>
-	@else
-		<title>{{ $myPostType }} - Driftinfo</title>
-	@endif
+    <title>Driftinformation - Region Halland</title>
 	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css">
 	<link href="{!! env('WP_HOME') !!}/styleguide5.0.0/css/components.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="{!! env('WP_HOME') !!}/include/style/development.css" type="text/css" media="all" />
