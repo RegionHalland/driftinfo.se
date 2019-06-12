@@ -43,12 +43,14 @@
 
 <script>
 
-
+    // Dölj alla kort från start
     $(".rh-disturbance-card__content").hide();
 
-    // Byt synlighet på kort med samma data-toggleid som ID:t på toggleswitchen
+    // Byt synlighet på kortet när man klickar toggle-knappen
     $(".rh-disturbance-card__toggle").on("click", function(){
         $("*[data-toggleid=" + event.target.id + "]").toggle();
+        // Byt pil på toggle knappen
+        $("#" + event.target.id).toggleClass("icon-chevron-up").toggleClass("icon-chevron-down");
     });
     
 

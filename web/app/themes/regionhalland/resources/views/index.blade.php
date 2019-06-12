@@ -208,7 +208,7 @@
                                     <p>{{ count($myItems[$i]->follow_up) }}</p>
                                 </div>
                                 <div class="col col-12 md-col-1">
-                                    <button  id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-chevron-up" style="font-family: feather !important; font-size:1.6em; border: 0px solid transparent;"></button>
+                                    <button  id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-chevron-down" style="font-family: feather !important; font-size:1.6em; border: 0px solid transparent;"></button>
                                 </div>
 
                                 <div class="rh-disturbance-card__content" data-toggleID="{{$togglerID}}">
