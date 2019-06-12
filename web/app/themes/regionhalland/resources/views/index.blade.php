@@ -7,7 +7,7 @@
         $sid = 1;
         $oid = 1;
         $type = 0;
-        $showDeleted = 0;
+        $showDeleted = 1;
 
         if(isset($_GET["sid"])){
             $sid = $_GET["sid"];
@@ -146,6 +146,7 @@
             <div class="" style="background: white;">
                 
                 @php($myItems = get_region_halland_drift_info($type))
+
                 @php($myPagination = get_region_halland_array_pagination(count($myItems),10,'sida'))
                 @php($i = $myPagination['start_item'])
            
@@ -182,7 +183,24 @@
                                     @if($myItems[$i]->date_updated)
                                         Senast uppdaterad:<p class=""> {!! get_region_halland_drift_fix_date($myItems[$i]->date_updated) !!}</p> {{-- TODO: Does this take "uppföljning" into account? --}}
                                     @endif
-                                    <p class="rh-labels mb2">{!! $myItems[$i]->status_name !!}</p>
+                                    @if($sid == 1)
+
+                                            @switch( $myItems[$i]->status )
+                                                @case (1)
+                                                    <p class="rh-labels mb2" style="background-color:red; color:white;">Akut</p>
+                                                    @break
+
+                                                @case (2)
+                                                     <p class="rh-labels mb2" style="background-color:yellow; color:black;">Enligt plan</p>
+                                                    @break
+
+                                                @case (3)
+                                                    <p class="rh-labels mb2" style="background-color:green;color:white;">Avslutad</p>
+                                                    @break
+
+                                            @endswitch
+
+                                    @endif
                                 </div>
                                 <div class="col col-12 md-col-2">
                                     @if($myItems[$i]->omrade)
@@ -207,8 +225,10 @@
                                     <strong>Uppdateringar</strong>
                                     <p>{{ count($myItems[$i]->follow_up) }}</p>
                                 </div>
+
+                                {{-- Toggle knapp --}}
                                 <div class="col col-12 md-col-1">
-                                    <button  id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-chevron-down" style="font-family: feather !important; font-size:1.6em; border: 0px solid transparent;"></button>
+                                    <button  id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; font-size:1.6em; border: 0px solid transparent;"></button>
                                 </div>
 
                                 <div class="rh-disturbance-card__content" data-toggleID="{{$togglerID}}">
