@@ -237,6 +237,9 @@
                                     </div>
                                     <div class="col col-12 p2 my2 rh-article" style="max-width: 65em; background: #F4F4F4; border:1px solid #D1D1D1;">
                                         <p>{!! wpautop($myItems[$i]->post_content) !!}</p>
+                                        @if($oid == 2)
+                                            Vid frågor kontakta Servicedesk 010-476 19 00
+                                        @endif
                                     </div>
                                     @if ($myItems[$i]->follow_up)
                                         @foreach ($myItems[$i]->follow_up as $followUp)
