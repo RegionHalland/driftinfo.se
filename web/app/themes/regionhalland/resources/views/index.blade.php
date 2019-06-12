@@ -152,9 +152,10 @@
            
                 @if($myPagination['antal_items'] > 0)
 
-
-                    {{-- <header class="clearfix m2 hidden-sm" style="border-left:8px solid transparent">
-                        <div class="col col-12 md-col-4">
+                {{-- Rubrikrad, visa bara från tablet och uppåt --}}
+                {{--
+                    <header class="clearfix m2 hidden-sm" style="border-left:8px solid transparent">
+                        <div class="col col-12 md-col-3">
                             <strong>Information</strong>
                         </div>
                         <div class="col col-12 md-col-2">
@@ -169,7 +170,10 @@
                         <div class="col col-12 md-col-2">
                             <strong>Uppdateringar</strong>
                         </div>
-                    </header>--}}
+                        <div class="col col-12 md-col-1">
+                        </div>
+                    </header>
+                    --}}
 
                     <div class="p1">
                         <?php while ($i < $myPagination['end_item']) { ?>
@@ -293,56 +297,92 @@
 
         @if($showDeleted == 1)        
             @php($myItems = get_region_halland_drift_info(10))
-            <div class="">
+            <div class="center" style="max-width:1152px;">
+            <div class="p1">
                 @foreach($myItems as $myItem)
-                    <div class="">
-                        <div class="">
+                    <div class="p2 my2 rh-card center">
+                        {{-- Generating an ID for toggle button --}}
+                        <?php $togglerID = uniqid();?>
 
-                            <div class="">
-                                <h3 class="">{!! $myItem->post_title !!}</h3>
+                        <div class="clearfix">
+                            <div class="col col-12 md-col-3">
+                                <h3 class="h2">{!! $myItem->post_title !!}</h3>
                                 @if($myItem->date_updated)
-                                    <p class="">Uppdaterad: {!! get_region_halland_drift_fix_date($myItem->date_updated) !!}</p>
+                                    Senast uppdaterad:<p class=""> {!! get_region_halland_drift_fix_date($myItem->date_updated) !!}</p> {{-- TODO: Does this take "uppföljning" into account? --}}
+                                @endif
+                                @if($sid == 1)
+
+                                    @switch( $myItem->status )
+                                        @case (1)
+                                        <p class="rh-labels mb2" style="background-color:red; color:white;">Akut</p>
+                                        @break
+
+                                        @case (2)
+                                        <p class="rh-labels mb2" style="background-color:yellow; color:black;">Enligt plan</p>
+                                        @break
+
+                                        @case (3)
+                                        <p class="rh-labels mb2" style="background-color:green;color:white;">Avslutad</p>
+                                        @break
+
+                                    @endswitch
+
                                 @endif
                             </div>
-                            <div class="">
-                                @if(isset($myItem->omrade))
+                            <div class="col col-12 md-col-2">
+                                @if($myItem->omrade)
                                     @foreach ($myItem->omrade as $omrade)
+                                        <strong>Område</strong>
                                         <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
                                     @endforeach
                                 @else
-                                    Ej angivet
+                                    <strong>Område</strong>
+                                    <p>Ej angivet</p>
                                 @endif
                             </div>
-                            <div class="">
+                            <div class="col col-12 md-col-2">
+                                <strong>Start</strong>
                                 <p>{!! get_region_halland_drift_fix_date($myItem->start_time) !!}</p>
                             </div>
-                            <div class="">
+                            <div class="col col-12 md-col-2">
+                                <strong>Beräknat avslut</strong>
                                 <p>{!! get_region_halland_drift_fix_date($myItem->end_time) !!}</p>
                             </div>
-                            <div class="">
-                                <p class="{!! $myItem->status_class !!}">{!! $myItem->status_name !!}</p>
+                            <div class="col col-12 md-col-2">
+                                <strong>Uppdateringar</strong>
+                                <p>{{ count($myItem->follow_up) }}</p>
                             </div>
-                            <div class="">
-                                <h5>Driftinformation</h5>
+
+                            {{-- Toggle knapp --}}
+                            <div class="col col-12 md-col-1">
+                                <button  id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; font-size:1.6em; border: 0px solid transparent;"></button>
                             </div>
-                            <div class="">
-                                <p>{!! $myItem->post_content !!}</p>
-                            </div>
-                            @if ($myItem->follow_up)
-                                <div class="">
-                                    <h5>Uppföljning</h5>
+
+                            <div class="rh-disturbance-card__content" data-toggleID="{{$togglerID}}">
+                                <div class="col col-12">
+                                    <strong>Beskrivning:</strong>
                                 </div>
-                                @foreach ($myItem->follow_up as $followUp)
-                                <div class="">
-                                    <p>{{ $followUp['rubrik'] }}</p>
-                                    <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p>
-                                    <p>{{ $followUp['content'] }}</p><br>
+                                <div class="col col-12 p2 my2 rh-article" style="max-width: 65em; background: #F4F4F4; border:1px solid #D1D1D1;">
+                                    <p>{!! wpautop($myItem->post_content) !!}</p>
+                                    @if($oid == 2)
+                                        Vid frågor kontakta Servicedesk 010-476 19 00
+                                    @endif
                                 </div>
-                                @endforeach            
-                            @endif
+                                @if ($myItem->follow_up)
+                                    @foreach ($myItem->follow_up as $followUp)
+                                        <div class="col col-12">
+                                            <p><strong>Uppdatering:</strong><br>
+                                                {{--<p>{{ $followUp['rubrik'] }}</p> --}}
+                                                {{-- <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p> --}}
+                                                {{ $followUp['content'] }}</p>
+                                        </div>
+                                    @endforeach
+                                @endif
+                            </div>
                         </div>
-                    </div>    
+                    </div>
                 @endforeach
+            </div>
             </div>
         @endif
 
