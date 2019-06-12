@@ -51,7 +51,7 @@
 
     <div class="mx-auto" style="max-width: 1440px;">
         {{-- Fliknavigation nivå 1 --}}
-        <div class="" style="position:relative; top: -3.6em;">
+        <div class="center" style="position:relative; top: -3.6em;max-width: 1152px">
             <div class="rh-tabs">
                 <ul class="rh-tabs-list" style="height: 3.6em;">
                     <li style="max-width:10em;" class="rh-tabs-list-item @if($sid == 1) rh-tabs-list-item--active @endif">
