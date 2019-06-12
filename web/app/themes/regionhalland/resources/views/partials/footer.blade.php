@@ -50,7 +50,7 @@
     $(".rh-disturbance-card__toggle").on("click", function(){
         $("*[data-toggleid=" + event.target.id + "]").toggle();
         // Byt pil på toggle knappen
-        $("#" + event.target.id).toggleClass("icon-chevron-up").toggleClass("icon-chevron-down");
+        $("#" + event.target.id).toggleClass("icon-plus").toggleClass("icon-minus");
     });
     
 
