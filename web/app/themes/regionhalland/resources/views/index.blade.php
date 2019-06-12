@@ -7,7 +7,7 @@
         $sid = 1;
         $oid = 1;
         $type = 0;
-        $showDeleted = 1;
+        $showDeleted = 0;
 
         if(isset($_GET["sid"])){
             $sid = $_GET["sid"];
@@ -235,11 +235,10 @@
                                     <div class="col col-12">
                                         <strong>Beskrivning:</strong>
                                     </div>
-                                    <div class="col col-12 p2 my2 rh-article" style="max-width: 55em; background: #F4F4F4; border:1px solid #D1D1D1;">
+                                    <div class="col col-12 p2 my2 rh-article" style="max-width: 65em; background: #F4F4F4; border:1px solid #D1D1D1;">
                                         <p>{!! wpautop($myItems[$i]->post_content) !!}</p>
                                     </div>
                                     @if ($myItems[$i]->follow_up)
-
                                         @foreach ($myItems[$i]->follow_up as $followUp)
                                         <div class="col col-12">
                                             <p><strong>Uppdatering:</strong><br>
