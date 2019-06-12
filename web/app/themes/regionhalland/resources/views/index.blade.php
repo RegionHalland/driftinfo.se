@@ -173,11 +173,12 @@
                     <div class="p1">
                         <?php while ($i < $myPagination['end_item']) { ?>
                         <div class="p2 my2 rh-card">
-
+                            {{-- Generating an ID for toggle button --}}
+                            <?php $togglerID = uniqid();?>
 
                             <div class="clearfix">
-                                <div class="col col-12 md-col-4">
-                                    <h3 class="">{!! $myItems[$i]->post_title !!}</h3>
+                                <div class="col col-12 md-col-3">
+                                    <h3 class="h2">{!! $myItems[$i]->post_title !!}</h3>
                                     @if($myItems[$i]->date_updated)
                                         Senast uppdaterad:<p class=""> {!! get_region_halland_drift_fix_date($myItems[$i]->date_updated) !!}</p> {{-- TODO: Does this take "uppföljning" into account? --}}
                                     @endif
@@ -206,24 +207,29 @@
                                     <strong>Uppdateringar</strong>
                                     <p>{{ count($myItems[$i]->follow_up) }}</p>
                                 </div>
-
-                                <div class="col col-12">
-                                    <strong>Beskrivning:</strong>
+                                <div class="col col-12 md-col-1">
+                                    <span id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-chevron-up" style="font-family: feather; font-size:1.6em;"></span>
                                 </div>
-                                <div class="col col-12 p2 my2" style="background: #F4F4F4; border:1px solid #D1D1D1;">
-                                    <p>{!! $myItems[$i]->post_content !!}</p>
-                                </div>
-                                @if ($myItems[$i]->follow_up)
 
-                                    @foreach ($myItems[$i]->follow_up as $followUp)
+                                <div class="rh-disturbance-card__content" data-toggleID="{{$togglerID}}">
                                     <div class="col col-12">
-                                        <p><strong>Uppdatering:</strong><br>
-                                        {{--<p>{{ $followUp['rubrik'] }}</p> --}}
-                                        {{-- <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p> --}}
-                                        {{ $followUp['content'] }}</p>
+                                        <strong>Beskrivning:</strong>
                                     </div>
-                                    @endforeach            
-                                @endif
+                                    <div class="col col-12 p2 my2 rh-article" style="max-width: 55em; background: #F4F4F4; border:1px solid #D1D1D1;">
+                                        <p>{!! wpautop($myItems[$i]->post_content) !!}</p>
+                                    </div>
+                                    @if ($myItems[$i]->follow_up)
+
+                                        @foreach ($myItems[$i]->follow_up as $followUp)
+                                        <div class="col col-12">
+                                            <p><strong>Uppdatering:</strong><br>
+                                            {{--<p>{{ $followUp['rubrik'] }}</p> --}}
+                                            {{-- <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p> --}}
+                                            {{ $followUp['content'] }}</p>
+                                        </div>
+                                        @endforeach
+                                    @endif
+                                </div>
                             </div>
                         </div>
                         <?php $i++; } ?>

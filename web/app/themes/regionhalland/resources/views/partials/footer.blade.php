@@ -42,61 +42,16 @@
 <script src="{!! env('WP_HOME') !!}/styleguide5.0.0/js/components.js"></script>
 
 <script>
-    function debounce(delay, fn) {
-        var timer = null;
-        return function () {
-            var context = this, args = arguments;
-            clearTimeout(timer);
-            timer = setTimeout(function () {
-                fn.apply(context, args);
-            }, delay);
-        };
-    }
 
-    $('a[href^="#"]').on( "click", function() {
-        var target = $(this.hash);
-        if (target.length) {
 
-            // Animate target
-            $('html,body').animate({scrollTop: target.offset().top}, 800);
+    $(".rh-disturbance-card__content").hide();
 
-            // Add class for highlight the text
-            $(target).addClass("content-highlight");
-
-            // Wait 2s and then remove the highlight class
-            setTimeout(function(){
-                $(target).removeClass("content-highlight");
-            }, 2000);
-
-            return false;
-        }
+    // Byt synlighet på kort med samma data-toggleid som ID:t på toggleswitchen
+    $(".rh-disturbance-card__toggle").on("click", function(){
+        $("*[data-toggleid=" + event.target.id + "]").toggle();
     });
+    
 
-    if ($("body.page-template-default")[0]){
-        $(window).scroll(debounce(250, function() {
-
-            var myPosition = Math.round($('#content-nav-placeholder').offset().top - $(window).scrollTop());
-            var myFooterTop = Math.round($('#footer-top-placeholder').offset().top - $(window).scrollTop());
-            var myContentNavBottom = Math.round($('#content-nav-bottom-placeholder').offset().top - $(window).scrollTop());
-            if (myPosition < 30) {
-                if (myFooterTop < myContentNavBottom + 40) {
-                    $(".content-nav__item").addClass("content-nav__item--tight");
-                } else {
-                    $("#content-nav-container").addClass("rh-get-fixed-sticky");
-                    $(".content-nav__item--tight").removeClass("content-nav__item--tight");
-                }
-            } else {
-                $("#content-nav-container").removeClass("rh-get-fixed-sticky");
-                $(".content-nav__item--tight").removeClass("content-nav__item--tight");
-
-            }
-        }));
-    }
-
-    $(".rh-header-button--search").on( "click", function() {
-        $(".rh-header-search-desktop").show();
-        $(".rh-header-button--search").hide();
-    });
 
     // **************************************
     // *** Javascript set cookie function ***
