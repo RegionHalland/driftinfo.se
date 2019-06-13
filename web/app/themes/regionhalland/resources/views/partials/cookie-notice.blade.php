@@ -1,25 +1,11 @@
-@if(function_exists('check_region_halland_cookie_notice'))
-	@php($checkCookieNotice = check_region_halland_cookie_notice())
-	@if ($checkCookieNotice == false)
-		@php($myCookieNotice = get_region_halland_cookie_notice())	
-		<div id="cookie-notice" class="relative background-light-blue p3 z4">
-			<div class="container mx-auto">
-				<div class="clearfix mxn3">
-					<div class="cookie-notice__container">
-						<div class="cookie-notice__text-container px3">
-							<svg class="icon mr1" viewBox="0 0 8 8">
-								{!! get_region_halland_icon('info') !!}
-							</svg>
-							<span class="h5">{!! $myCookieNotice['message'] !!}</span>
-						</div>
-						<div class="cookie-notice__btn-container px3">
-							<button id="cookie-consent" class="btn btn-primary">
-								{!! $myCookieNotice['button'] !!}
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	@endif
+@php($checkCookieNotice = check_region_halland_cookie_notice())
+@if ($checkCookieNotice == false)
+	@php($cookie_notice = get_region_halland_cookie_notice())
+	<div class="rh-cookie" style="background-color: rgba(195,220,193,0.5);">
+		<span class="rh-cookie-icon"></span>
+		<p class="rh-cookie-description">
+			{!! $cookie_notice['message'] !!}
+		</p>
+		<button id="cookie-consent" style="background-color: #378A30;width:13ex;" class="rh-button rh-button--primary cookie-button" aria-label="Acceptera cookies och dölj meddelandet" role="button">{!! $cookie_notice['button'] !!}</button>
+	</div>
 @endif
