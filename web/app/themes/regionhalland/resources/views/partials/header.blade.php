@@ -1,7 +1,5 @@
 <div class="pl1 py2 rh-logo-sitename mx-auto" style="max-width: 1152px">
-    <a href=".">
-        <img class="rh-logo-sitename-logo" src="{!! env('WP_HOME') !!}/styleguide5.0.0/images/components/rh-logo-sitename/navigation_logo.svg" alt="Driftinformation från Region Halland - förstasida">
-    </a>
+    <a href="/"><img src="/include/img/rh-logo.jpg" alt="Länk till förstasidan"></a>
 </div>
 
 <div style="background: #004890; color: white;">
