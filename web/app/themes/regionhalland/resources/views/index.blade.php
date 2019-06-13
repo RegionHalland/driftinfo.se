@@ -85,7 +85,7 @@
                 <div class="rh-buttongroup__button rh-buttongroup__button--left @if($oid == 1) rh-buttongroup__button--active @endif">
 
                             <a class="rh-buttongroup__button-text" href="./?oid=1&sid={{$sid}}">Alla</a>
-                            <span class="rh-labels">
+                            <span class="rh-labels" style="color: white; background: #61A2D8">
                                 @switch($sid)
                                     @case(1)
                                         {{ $myNumbers['alla-pagaende'] }}
@@ -105,7 +105,7 @@
                 <div class="rh-buttongroup__button @if($oid == 2) rh-buttongroup__button--active @endif">
 
                             <a class="rh-buttongroup__button-text" href="./?oid=2&sid={{$sid}}">IT/Telefoni</a>
-                            <span class="rh-labels">
+                            <span class="rh-labels" style="color: white; background: #61A2D8">
                                 @switch($sid)
                                     @case(1)
                                         {{ $myNumbers['it-telefoni-pagaende'] }}
@@ -125,7 +125,7 @@
                     <div class="rh-buttongroup__button rh-buttongroup__button--right @if($oid == 3) rh-buttongroup__button--active @endif">
 
                             <a class="rh-buttongroup__button-text" href="./?oid=3&sid={{$sid}}">Fastighet</a>
-                            <span class="rh-labels">
+                            <span class="rh-labels" style="color: white; background: #61A2D8">
                                 @switch($sid)
                                     @case(1)
                                         {{ $myNumbers['fastighet-pagaende'] }}
@@ -191,7 +191,7 @@
 
                                             @switch( $myItems[$i]->status )
                                                 @case (1)
-                                                    <p class="rh-labels mb2" style="background-color:red; color:white;">Akut</p>
+                                                    <p class="rh-labels mb2" style="background-color:#D10000; color:white;">Akut</p>
                                                     @break
 
                                                 @case (2)
@@ -199,7 +199,7 @@
                                                     @break
 
                                                 @case (3)
-                                                    <p class="rh-labels mb2" style="background-color:green;color:white;">Avslutad</p>
+                                                    <p class="rh-labels mb2" style="background-color:#378A30;color:white;">Avslutad</p>
                                                     @break
 
                                             @endswitch
@@ -314,7 +314,7 @@
 
                                     @switch( $myItem->status )
                                         @case (1)
-                                        <p class="rh-labels mb2" style="background-color:red; color:white;">Akut</p>
+                                        <p class="rh-labels mb2" style="background-color:#D10000; color:white;">Akut</p>
                                         @break
 
                                         @case (2)
@@ -322,7 +322,7 @@
                                         @break
 
                                         @case (3)
-                                        <p class="rh-labels mb2" style="background-color:green;color:white;">Avslutad</p>
+                                        <p class="rh-labels mb2" style="background-color:#378A30;color:white;">Avslutad</p>
                                         @break
 
                                     @endswitch
