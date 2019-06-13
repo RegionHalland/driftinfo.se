@@ -2,7 +2,7 @@
 
 @section('content')
     
-        <div class="rh-xpad-A pt3 pb3 clearfix center" style="max-width: 1440px;background: #FBFAF9">
+        <div class="rh-xpad-A pt1 pb3 clearfix center" style="max-width: 1440px;background: #FBFAF9">
         <div class="rh-xpad-B pt3 pb3" style="max-width: 1152px;background: white;">
             <main>
                 <div class="clearfix">
