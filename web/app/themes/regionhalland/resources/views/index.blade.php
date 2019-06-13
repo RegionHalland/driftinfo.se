@@ -355,7 +355,7 @@
 
                             {{-- Toggle knapp --}}
                             <div class="col col-12 md-col-1">
-                                <button  id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; font-size:1.6em; border: 0px solid transparent;"></button>
+                                <button  id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; font-size:1.6em; background: white; border: 0px solid transparent;"></button>
                             </div>
 
                             <div class="rh-disturbance-card__content" data-toggleID="{{$togglerID}}">
