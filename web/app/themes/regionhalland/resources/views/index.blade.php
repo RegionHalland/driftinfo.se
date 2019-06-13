@@ -225,7 +225,7 @@
                                                     @break
 
                                                 @case (2)
-                                                     <p class="rh-labels mb2" style="background-color:yellow; color:black;">Enligt plan</p>
+                                                     <p class="rh-labels mb2" style="background-color:#FF8C00; color:black;">Enligt plan</p>
                                                     @break
 
                                                 @case (3)
@@ -348,7 +348,7 @@
                                         @break
 
                                         @case (2)
-                                        <p class="rh-labels mb2" style="background-color:yellow; color:black;">Enligt plan</p>
+                                        <p class="rh-labels mb2" style="background-color:#FF8C00; color:black;">Enligt plan</p>
                                         @break
 
                                         @case (3)
