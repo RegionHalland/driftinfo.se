@@ -57,21 +57,33 @@
                     <li style="max-width:10em;" class="rh-tabs-list-item @if($sid == 1) rh-tabs-list-item--active @endif">
                         <p class="rh-tabs-list-item-text">
                             <a class="rh-link--navigation" href="./?oid={{$oid}}&sid=1">
-                                Pågående
+                                @if($sid ==1 )
+                                    <strong>Pågående</strong>
+                                @else
+                                    Pågående
+                                @endif
                             </a>
                         </p>
                     </li>
                     <li style="max-width:10em;" class="rh-tabs-list-item @if($sid == 2) rh-tabs-list-item--active @endif">
                         <p class="rh-tabs-list-item-text">
                             <a class="rh-link--navigation" href="./?oid={{$oid}}&sid=2" class="">
-                                Kommande
+                                @if($sid == 2 )
+                                    <strong>Kommande</strong>
+                                @else
+                                    Kommande
+                                @endif
                             </a>
                         </p>
                     </li>
                     <li style="max-width:10em;" class="rh-tabs-list-item @if($sid == 3) rh-tabs-list-item--active @endif">
                         <p class="rh-tabs-list-item-text">
                             <a class="rh-link--navigation" href="./?oid={{$oid}}&sid=3" class="">
-                                Avslutade
+                                @if($sid == 3 )
+                                    <strong>Avslutade</strong>
+                                @else
+                                    Avslutade
+                                @endif
                             </a>
                         </p>
                     </li>
@@ -84,7 +96,13 @@
                 {{-- Fliknavigation nivå 2 - Fliken "Alla" --}}
                 <div class="rh-buttongroup__button rh-buttongroup__button--left @if($oid == 1) rh-buttongroup__button--active @endif">
 
-                            <a class="rh-buttongroup__button-text" href="./?oid=1&sid={{$sid}}">Alla</a>
+                            <a class="rh-buttongroup__button-text" href="./?oid=1&sid={{$sid}}">
+                                @if($oid ==1 )
+                                    <strong>Alla</strong>
+                                @else
+                                    Alla
+                                @endif
+                            </a>
                             <span class="rh-labels" style="color: white; background: #61A2D8">
                                 @switch($sid)
                                     @case(1)
@@ -104,7 +122,13 @@
                     {{-- Fliknavigation nivå 2 - Fliken "IT/telefoni" --}}
                 <div class="rh-buttongroup__button @if($oid == 2) rh-buttongroup__button--active @endif">
 
-                            <a class="rh-buttongroup__button-text" href="./?oid=2&sid={{$sid}}">IT/Telefoni</a>
+                            <a class="rh-buttongroup__button-text" href="./?oid=2&sid={{$sid}}">
+                                @if($oid == 2 )
+                                    <strong>IT/Telefoni</strong>
+                                @else
+                                    IT/Telefoni
+                                @endif
+                            </a>
                             <span class="rh-labels" style="color: white; background: #61A2D8">
                                 @switch($sid)
                                     @case(1)
@@ -124,7 +148,13 @@
                     {{-- Fliknavigation nivå 2 - Fliken "Fastighet" --}}
                     <div class="rh-buttongroup__button rh-buttongroup__button--right @if($oid == 3) rh-buttongroup__button--active @endif">
 
-                            <a class="rh-buttongroup__button-text" href="./?oid=3&sid={{$sid}}">Fastighet</a>
+                            <a class="rh-buttongroup__button-text" href="./?oid=3&sid={{$sid}}">
+                                @if($oid ==3 )
+                                    <strong>Fastighet</strong>
+                                @else
+                                    Fastighet
+                                @endif
+                            </a>
                             <span class="rh-labels" style="color: white; background: #61A2D8">
                                 @switch($sid)
                                     @case(1)
