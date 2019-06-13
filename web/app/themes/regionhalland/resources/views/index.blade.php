@@ -261,7 +261,7 @@
                                 </div>
 
                                 {{-- Toggle knapp --}}
-                                <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; color: black; background: #E4E4E4; border: 1px solid grey;">
+                                <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; color: black; background: #E4E4E4;">
                                     <span style=""><strong>Beskrivning</strong></span><button id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; background:white; font-size:1.6em; width:1.5em; height: 1.5em; border-radius: 50%; border: 0px solid transparent;"></button>
                                 </div>
 
@@ -384,7 +384,7 @@
                             </div>
 
                             {{-- Toggle knapp --}}
-                            <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; color: black; background: #E4E4E4; border: 1px solid grey;">
+                            <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; color: black; background: #E4E4E4;">
                                 <span style=""><strong>Beskrivning</strong></span><button id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; background:white; font-size:1.6em; width:1.5em; height: 1.5em; border-radius: 50%; border: 0px solid transparent;"></button>
                             </div>
 
