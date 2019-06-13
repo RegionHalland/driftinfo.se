@@ -330,12 +330,12 @@
             <div class="center" style="max-width:1152px;">
             <div class="p1">
                 @foreach($myItems as $myItem)
-                    <div class="p2 my2 rh-card center">
+                    <div class="p2 my2 rh-card">
                         {{-- Generating an ID for toggle button --}}
                         <?php $togglerID = uniqid();?>
 
                         <div class="clearfix">
-                            <div class="col col-12 md-col-3">
+                            <div class="col col-12 md-col-4">
                                 <h3 class="h2">{!! $myItem->post_title !!}</h3>
                                 @if($myItem->date_updated)
                                     Senast uppdaterad:<p class=""> {!! get_region_halland_drift_fix_date($myItem->date_updated) !!}</p> {{-- TODO: Does this take "uppföljning" into account? --}}
@@ -384,30 +384,30 @@
                             </div>
 
                             {{-- Toggle knapp --}}
-                            <div class="col col-12 md-col-1">
-                                <button  id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; font-size:1.6em; background: white; border: 0px solid transparent;"></button>
+                            <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; color: black; background: #E4E4E4; border: 1px solid grey;">
+                                <span style=""><strong>Beskrivning</strong></span><button id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; background:white; font-size:1.6em; width:1.5em; height: 1.5em; border-radius: 50%; border: 0px solid transparent;"></button>
                             </div>
 
                             <div class="rh-disturbance-card__content" data-toggleID="{{$togglerID}}">
-                                <div class="col col-12">
-                                    <strong>Beskrivning:</strong>
-                                </div>
-                                <div class="col col-12 p2 my2 rh-article" style="max-width: 65em; background: #F4F4F4; border:1px solid #D1D1D1;">
+                                <div class="col col-12 p2 mb2 rh-article" style="background: #F4F4F4;max-width: 65em; border:1px solid #D1D1D1;">
                                     <p>{!! wpautop($myItem->post_content) !!}</p>
+                                    @if ($myItem->follow_up)
+                                        @foreach ($myItem->follow_up as $followUp)
+                                            <div class="col col-12">
+                                                <p><strong>Uppdatering:</strong><br>
+                                                    {{--<p>{{ $followUp['rubrik'] }}</p> --}}
+                                                    {{-- <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p> --}}
+                                                    {{ $followUp['content'] }}</p>
+                                            </div>
+                                        @endforeach
+                                    @endif
+
                                     @if($oid == 2)
                                         Vid frågor kontakta Servicedesk 010-476 19 00
                                     @endif
+
                                 </div>
-                                @if ($myItem->follow_up)
-                                    @foreach ($myItem->follow_up as $followUp)
-                                        <div class="col col-12">
-                                            <p><strong>Uppdatering:</strong><br>
-                                                {{--<p>{{ $followUp['rubrik'] }}</p> --}}
-                                                {{-- <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p> --}}
-                                                {{ $followUp['content'] }}</p>
-                                        </div>
-                                    @endforeach
-                                @endif
+
                             </div>
                         </div>
                     </div>
