@@ -183,36 +183,38 @@
                 @if($myPagination['antal_items'] > 0)
 
                 {{-- Rubrikrad, visa bara från tablet och uppåt --}}
-                {{--
-                    <header class="clearfix m2 hidden-sm" style="border-left:8px solid transparent">
-                        <div class="col col-12 md-col-3">
-                            <strong>Information</strong>
-                        </div>
-                        <div class="col col-12 md-col-2">
-                            <strong>Område</strong>
-                        </div>
-                        <div class="col col-12 md-col-2">
-                            <strong>Start</strong>
-                        </div>
-                        <div class="col col-12 md-col-2">
-                            <strong>Beräknat avslut</strong>
-                        </div>
-                        <div class="col col-12 md-col-2">
-                            <strong>Uppdateringar</strong>
-                        </div>
-                        <div class="col col-12 md-col-1">
+
+                    <header class="clearfix mt3 p1 hidden-sm" style="border-left:8px solid transparent">
+                        <div class="p2">
+                            <div class="col col-12 sm-col-4">
+                                <strong>Information</strong>
+                            </div>
+                            <div class="col col-12 sm-col-2">
+                                <strong>Område</strong>
+                            </div>
+                            <div class="col col-12 sm-col-2">
+                                <strong>Start</strong>
+                            </div>
+                            <div class="col col-12 sm-col-2">
+                                <strong>Beräknat avslut</strong>
+                            </div>
+                            <div class="col col-12 sm-col-2">
+                                <strong>Uppdateringar</strong>
+                            </div>
+                            <div class="col col-12 sm-col-2">
+                            </div>
                         </div>
                     </header>
-                    --}}
+
 
                     <div class="p1">
                         <?php while ($i < $myPagination['end_item']) { ?>
-                        <div class="p2 my2 rh-card">
+                        <div class="p2 mb2 rh-card">
                             {{-- Generating an ID for toggle button --}}
                             <?php $togglerID = uniqid();?>
 
                             <div class="clearfix">
-                                <div class="col col-12 md-col-4">
+                                <div class="col col-12 sm-col-4">
                                     <h3 class="h2">{!! $myItems[$i]->post_title !!}</h3>
                                     @if($myItems[$i]->date_updated)
                                         Senast uppdaterad:<p class=""> {!! get_region_halland_drift_fix_date($myItems[$i]->date_updated) !!}</p> {{-- TODO: Does this take "uppföljning" into account? --}}
@@ -236,27 +238,27 @@
 
                                     @endif
                                 </div>
-                                <div class="col col-12 md-col-2">
+                                <div class="col col-12 sm-col-2">
                                     @if($myItems[$i]->omrade)
                                         @foreach ($myItems[$i]->omrade as $omrade)
-                                            <strong>Område</strong>
+                                            <strong class="only-sm">Område</strong>
                                             <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
                                         @endforeach
                                     @else
-                                        <strong>Område</strong>
+                                        <strong class="only-sm">Område</strong>
                                         <p>Ej angivet</p>
                                     @endif
                                 </div>
-                                <div class="col col-12 md-col-2">
-                                    <strong>Start</strong>
+                                <div class="col col-12 sm-col-2">
+                                    <strong class="only-sm">Start</strong>
                                     <p>{!! get_region_halland_drift_fix_date($myItems[$i]->start_time) !!}</p>
                                 </div>
-                                <div class="col col-12 md-col-2">
-                                    <strong>Beräknat avslut</strong>
+                                <div class="col col-12 sm-col-2">
+                                    <strong class="only-sm">Beräknat avslut</strong>
                                     <p>{!! get_region_halland_drift_fix_date($myItems[$i]->end_time) !!}</p>
                                 </div>
-                                <div class="col col-12 md-col-2">
-                                    <strong>Uppdateringar</strong>
+                                <div class="col col-12 sm-col-2">
+                                    <strong class="only-sm">Uppdateringar</strong>
                                     <p>{{ count($myItems[$i]->follow_up) }}</p>
                                 </div>
 
@@ -335,7 +337,7 @@
                         <?php $togglerID = uniqid();?>
 
                         <div class="clearfix">
-                            <div class="col col-12 md-col-4">
+                            <div class="col col-12 sm-col-4">
                                 <h3 class="h2">{!! $myItem->post_title !!}</h3>
                                 @if($myItem->date_updated)
                                     Senast uppdaterad:<p class=""> {!! get_region_halland_drift_fix_date($myItem->date_updated) !!}</p> {{-- TODO: Does this take "uppföljning" into account? --}}
@@ -359,27 +361,27 @@
 
                                 @endif
                             </div>
-                            <div class="col col-12 md-col-2">
+                            <div class="col col-12 sm-col-2">
                                 @if($myItem->omrade)
                                     @foreach ($myItem->omrade as $omrade)
-                                        <strong>Område</strong>
+                                        <strong class="only-sm">Område</strong>
                                         <p>{!! get_region_halland_drift_omrade_namn($omrade) !!}</p>
                                     @endforeach
                                 @else
-                                    <strong>Område</strong>
+                                    <strong class="only-sm">Område</strong>
                                     <p>Ej angivet</p>
                                 @endif
                             </div>
-                            <div class="col col-12 md-col-2">
-                                <strong>Start</strong>
+                            <div class="col col-12 sm-col-2">
+                                <strong class="only-sm">Start</strong>
                                 <p>{!! get_region_halland_drift_fix_date($myItem->start_time) !!}</p>
                             </div>
-                            <div class="col col-12 md-col-2">
-                                <strong>Beräknat avslut</strong>
+                            <div class="col col-12 sm-col-2">
+                                <strong class="only-sm">Beräknat avslut</strong>
                                 <p>{!! get_region_halland_drift_fix_date($myItem->end_time) !!}</p>
                             </div>
-                            <div class="col col-12 md-col-2">
-                                <strong>Uppdateringar</strong>
+                            <div class="col col-12 sm-col-2">
+                                <strong class="only-sm">Uppdateringar</strong>
                                 <p>{{ count($myItem->follow_up) }}</p>
                             </div>
 
