@@ -374,18 +374,18 @@
                             </div>
                             <div class="col col-12 sm-col-2">
                                 <strong class="only-sm">Start</strong>
-                                @if($myItem->start_time)
+                                @if(get_region_halland_drift_fix_date($myItem->start_time))
                                     <p>{!! get_region_halland_drift_fix_date($myItem->start_time) !!}</p>
                                 @else
-                                    &nbsp
+                                    &nbsp;
                                 @endif
                             </div>
                             <div class="col col-12 sm-col-2">
                                 <strong class="only-sm">Beräknat avslut</strong>
-                                @if($myItem->end_time)
+                                @if(get_region_halland_drift_fix_date($myItem->end_time))
                                     <p>{!! get_region_halland_drift_fix_date($myItem->end_time) !!}</p>
                                 @else
-                                    &nbsp
+                                    &nbsp;
                                 @endif
                             </div>
                             <div class="col col-12 sm-col-2">
