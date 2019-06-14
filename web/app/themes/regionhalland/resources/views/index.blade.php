@@ -261,9 +261,12 @@
                                         &nbsp;
                                     @endif
                                 </div>
-                                <div class="col col-12 sm-col-2">
+                                <div class="col col-12 sm-col-1">
                                     <strong class="only-sm">Uppdateringar</strong>
                                     <p>{{ count($myItems[$i]->follow_up) }}</p>
+                                </div>
+                                <div class="col col-12 sm-col-1">
+                                    &nbsp;
                                 </div>
 
                                 {{-- Toggle knapp --}}
@@ -392,9 +395,12 @@
                                     &nbsp;
                                 @endif
                             </div>
-                            <div class="col col-12 sm-col-2">
+                            <div class="col col-12 sm-col-1">
                                 <strong class="only-sm">Uppdateringar</strong>
                                 <p>{{ count($myItem->follow_up) }}</p>
+                            </div>
+                            <div class="col col-12 sm-col-1">
+                                &nbsp;
                             </div>
 
                             {{-- Toggle knapp --}}
