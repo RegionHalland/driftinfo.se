@@ -199,8 +199,6 @@
                             <div class="col col-12 sm-col-2">
                                 <strong>Uppdateringar</strong>
                             </div>
-                            <div class="col col-12 sm-col-2">
-                            </div>
                         </div>
                     </header>
 
