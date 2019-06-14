@@ -264,7 +264,7 @@
 
                                 {{-- Toggle knapp --}}
                                 <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; max-width: 65em; color: black; background: #E4E4E4;">
-                                    <span style=""><strong>Beskrivning</strong></span><button id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; background:white; font-size:1.4em; width:1.5em; height: 1.5em; border-radius: 50%; border: 0px solid transparent;"></button>
+                                    <span class="pl1"><strong>Beskrivning</strong></span><button id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; background:white; font-size:1.4em; width:1.5em; height: 1.5em; border-radius: 50%; border: 0px solid transparent;"></button>
                                 </div>
 
                                 <div class="rh-disturbance-card__content" data-toggleID="{{$togglerID}}">
@@ -387,7 +387,7 @@
 
                             {{-- Toggle knapp --}}
                             <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; color: black; max-width:65em; background: #E4E4E4;">
-                                <span style=""><strong>Beskrivning</strong></span><button id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; background:white; font-size:1.4em; width:1.5em; height: 1.5em; border-radius: 50%; border: 0px solid transparent;"></button>
+                                <span class="pl1"><strong>Beskrivning</strong></span><button id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; background:white; font-size:1.4em; width:1.5em; height: 1.5em; border-radius: 50%; border: 0px solid transparent;"></button>
                             </div>
 
                             <div class="rh-disturbance-card__content" data-toggleID="{{$togglerID}}">
