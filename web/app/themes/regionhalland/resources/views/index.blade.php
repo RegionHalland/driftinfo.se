@@ -250,7 +250,7 @@
                                     @if(get_region_halland_drift_fix_date($myItems[$i]->start_time))
                                         <p>{!! get_region_halland_drift_fix_date($myItems[$i]->start_time) !!}</p>
                                     @else
-                                        &nbsp;
+                                        -
                                     @endif
                                 </div>
                                 <div class="col col-12 sm-col-2">
@@ -258,7 +258,7 @@
                                     @if(get_region_halland_drift_fix_date($myItems[$i]->end_time))
                                         <p>{!! get_region_halland_drift_fix_date($myItems[$i]->end_time) !!}</p>
                                     @else
-                                        &nbsp;
+                                        -
                                     @endif
                                 </div>
                                 <div class="col col-12 sm-col-1">
@@ -266,7 +266,7 @@
                                     @if(count($myItems[$i]->follow_up) > 0)
                                         <p>{{ count($myItems[$i]->follow_up) }}</p>
                                     @else
-                                        &nbsp;
+                                        -
                                     @endif
                                 </div>
                                 <div class="col col-12 sm-col-1">
@@ -388,7 +388,7 @@
                                 @if(get_region_halland_drift_fix_date($myItem->start_time))
                                     <p>{!! get_region_halland_drift_fix_date($myItem->start_time) !!}</p>
                                 @else
-                                    &nbsp;
+                                    -
                                 @endif
                             </div>
                             <div class="col col-12 sm-col-2">
@@ -396,7 +396,7 @@
                                 @if(get_region_halland_drift_fix_date($myItem->end_time))
                                     <p>{!! get_region_halland_drift_fix_date($myItem->end_time) !!}</p>
                                 @else
-                                    &nbsp;
+                                    -
                                 @endif
                             </div>
                             <div class="col col-12 sm-col-1">
@@ -404,7 +404,7 @@
                                 @if(count($myItem->follow_up) > 0)
                                     <p>{{ count($myItem->follow_up) }}</p>
                                 @else
-                                    &nbsp;
+                                    -
                                 @endif
                             </div>
                             <div class="col col-12 sm-col-1">
