@@ -218,22 +218,19 @@
                                         Senast uppdaterad:<p class=""> {!! get_region_halland_drift_fix_date($myItems[$i]->date_updated) !!}</p> {{-- TODO: Does this take "uppföljning" into account? --}}
                                     @endif
                                     @if($sid == 1)
+                                        @switch( $myItems[$i]->status )
+                                            @case (1)
+                                                <p class="rh-labels mb2" style="background-color:#D10000; color:white;">Akut</p>
+                                                @break
 
-                                            @switch( $myItems[$i]->status )
-                                                @case (1)
-                                                    <p class="rh-labels mb2" style="background-color:#D10000; color:white;">Akut</p>
-                                                    @break
+                                            @case (2)
+                                                 <p class="rh-labels mb2" style="background-color:#FF8C00; color:black;">Enligt plan</p>
+                                                @break
 
-                                                @case (2)
-                                                     <p class="rh-labels mb2" style="background-color:#FF8C00; color:black;">Enligt plan</p>
-                                                    @break
-
-                                                @case (3)
-                                                    <p class="rh-labels mb2" style="background-color:#378A30;color:white;">Avslutad</p>
-                                                    @break
-
-                                            @endswitch
-
+                                            @case (3)
+                                                <p class="rh-labels mb2" style="background-color:#378A30;color:white;">Avslutad</p>
+                                                @break
+                                        @endswitch
                                     @endif
                                 </div>
                                 <div class="col col-12 sm-col-2">
