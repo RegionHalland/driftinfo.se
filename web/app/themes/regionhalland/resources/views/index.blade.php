@@ -168,12 +168,10 @@
                                     @break
                                 @endswitch
                             </span>
-
                     </div>
-
             </div>
 
-            <div class="" style="background: white;">
+            <div style="background: white;">
                 
                 @php($myItems = get_region_halland_drift_info($type))
 
@@ -184,7 +182,7 @@
 
                 {{-- Rubrikrad, visa bara från tablet och uppåt --}}
 
-                    <header class="clearfix mt3 p1 hidden-sm" style="border-left:8px solid transparent">
+                    <header class="clearfix mt3 p1 hidden-sm">
                         <div class="p2">
                             <div class="col col-12 sm-col-4">
                                 &nbsp;
