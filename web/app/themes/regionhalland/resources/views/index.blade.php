@@ -263,6 +263,10 @@
                                         &nbsp;
                                     @endif
                                 </div>
+                                <div class="col col-12 sm-col-2">
+                                    <strong class="only-sm">Uppdateringar</strong>
+                                    <p>{{ count($myItems[$i]->follow_up) }}</p>
+                                </div>
 
                                 {{-- Toggle knapp --}}
                                 <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; max-width: 65em; color: black; background: #E4E4E4;">
