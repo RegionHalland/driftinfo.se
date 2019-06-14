@@ -273,7 +273,7 @@
                                         @if ($myItems[$i]->follow_up)
                                             @foreach ($myItems[$i]->follow_up as $followUp)
                                                 <div class="col col-12">
-                                                    <p><strong>Uppdatering:</strong><br>
+                                                    <p><strong>Uppdatering {{$loop -> iteration}}:</strong><br>
                                                         {{--<p>{{ $followUp['rubrik'] }}</p> --}}
                                                         {{-- <p>{{ get_region_halland_drift_fix_date($followUp['time']) }}</p> --}}
                                                         {{ $followUp['content'] }}</p>
