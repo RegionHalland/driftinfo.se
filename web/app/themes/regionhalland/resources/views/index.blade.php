@@ -263,7 +263,11 @@
                                 </div>
                                 <div class="col col-12 sm-col-1">
                                     <strong class="only-sm">Uppdateringar</strong>
-                                    <p>{{ count($myItems[$i]->follow_up) }}</p>
+                                    @if(count($myItems[$i]->follow_up > 0))
+                                        <p>{{ count($myItems[$i]->follow_up) }}</p>
+                                    @else
+                                        &nbsp;
+                                    @endif
                                 </div>
                                 <div class="col col-12 sm-col-1">
                                     &nbsp;
