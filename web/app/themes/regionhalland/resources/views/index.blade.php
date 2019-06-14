@@ -249,15 +249,19 @@
                                 </div>
                                 <div class="col col-12 sm-col-2">
                                     <strong class="only-sm">Start</strong>
-                                    <p>{!! get_region_halland_drift_fix_date($myItems[$i]->start_time) !!}</p>
+                                    @if(get_region_halland_drift_fix_date($myItems[$i]->start_time))
+                                        <p>{!! get_region_halland_drift_fix_date($myItems[$i]->start_time) !!}</p>
+                                    @else
+                                        &nbsp;
+                                    @endif
                                 </div>
                                 <div class="col col-12 sm-col-2">
                                     <strong class="only-sm">Beräknat avslut</strong>
-                                    <p>{!! get_region_halland_drift_fix_date($myItems[$i]->end_time) !!}</p>
-                                </div>
-                                <div class="col col-12 sm-col-2">
-                                    <strong class="only-sm">Uppdateringar</strong>
-                                    <p>{{ count($myItems[$i]->follow_up) }}</p>
+                                    @if(get_region_halland_drift_fix_date($myItems[$i]->end_time))
+                                        <p>{!! get_region_halland_drift_fix_date($myItems[$i]->end_time) !!}</p>
+                                    @else
+                                        &nbsp;
+                                    @endif
                                 </div>
 
                                 {{-- Toggle knapp --}}
