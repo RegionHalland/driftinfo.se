@@ -196,8 +196,11 @@
                             <div class="col col-12 sm-col-2">
                                 <strong>Beräknat avslut</strong>
                             </div>
-                            <div class="col col-12 sm-col-2">
+                            <div class="col col-12 sm-col-1">
                                 <strong>Uppdateringar</strong>
+                            </div>
+                            <div class="col col-12 sm-col-1">
+                                &nbsp;
                             </div>
                         </div>
                     </header>
