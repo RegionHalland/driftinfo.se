@@ -187,7 +187,7 @@
                     <header class="clearfix mt3 p1 hidden-sm" style="border-left:8px solid transparent">
                         <div class="p2">
                             <div class="col col-12 sm-col-4">
-                                <strong>Information</strong>
+                                &nbsp;
                             </div>
                             <div class="col col-12 sm-col-2">
                                 <strong>Område</strong>
