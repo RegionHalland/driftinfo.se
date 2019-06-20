@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-server="{!! env('SITE_SERVER') !!}" data-version="1.0.0">
   @include('partials.cookie-notice')
   @include('partials.head')
   <body @php body_class() @endphp>
