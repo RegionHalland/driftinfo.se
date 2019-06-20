@@ -168,12 +168,10 @@
                                     @break
                                 @endswitch
                             </span>
-
                     </div>
-
             </div>
 
-            <div class="" style="background: white;">
+            <div style="background: white;">
                 
                 @php($myItems = get_region_halland_drift_info($type))
 
@@ -184,10 +182,10 @@
 
                 {{-- Rubrikrad, visa bara från tablet och uppåt --}}
 
-                    <header class="clearfix mt3 p1 hidden-sm" style="border-left:8px solid transparent">
+                    <header class="clearfix mt3 p1 hidden-sm">
                         <div class="p2">
                             <div class="col col-12 sm-col-4">
-                                <strong>Information</strong>
+                                &nbsp;
                             </div>
                             <div class="col col-12 sm-col-2">
                                 <strong>Område</strong>
@@ -198,10 +196,11 @@
                             <div class="col col-12 sm-col-2">
                                 <strong>Beräknat avslut</strong>
                             </div>
-                            <div class="col col-12 sm-col-2">
+                            <div class="col col-12 sm-col-1">
                                 <strong>Uppdateringar</strong>
                             </div>
-                            <div class="col col-12 sm-col-2">
+                            <div class="col col-12 sm-col-1">
+                                &nbsp;
                             </div>
                         </div>
                     </header>
@@ -220,22 +219,19 @@
                                         Senast uppdaterad:<p class=""> {!! get_region_halland_drift_fix_date($myItems[$i]->date_updated) !!}</p> {{-- TODO: Does this take "uppföljning" into account? --}}
                                     @endif
                                     @if($sid == 1)
+                                        @switch( $myItems[$i]->status )
+                                            @case (1)
+                                                <p class="rh-labels mb2" style="background-color:#D10000; color:white;">Akut</p>
+                                                @break
 
-                                            @switch( $myItems[$i]->status )
-                                                @case (1)
-                                                    <p class="rh-labels mb2" style="background-color:#D10000; color:white;">Akut</p>
-                                                    @break
+                                            @case (2)
+                                                 <p class="rh-labels mb2" style="background-color:#FF8C00; color:black;">Enligt plan</p>
+                                                @break
 
-                                                @case (2)
-                                                     <p class="rh-labels mb2" style="background-color:#FF8C00; color:black;">Enligt plan</p>
-                                                    @break
-
-                                                @case (3)
-                                                    <p class="rh-labels mb2" style="background-color:#378A30;color:white;">Avslutad</p>
-                                                    @break
-
-                                            @endswitch
-
+                                            @case (3)
+                                                <p class="rh-labels mb2" style="background-color:#378A30;color:white;">Avslutad</p>
+                                                @break
+                                        @endswitch
                                     @endif
                                 </div>
                                 <div class="col col-12 sm-col-2">
@@ -251,20 +247,35 @@
                                 </div>
                                 <div class="col col-12 sm-col-2">
                                     <strong class="only-sm">Start</strong>
-                                    <p>{!! get_region_halland_drift_fix_date($myItems[$i]->start_time) !!}</p>
+                                    @if(get_region_halland_drift_fix_date($myItems[$i]->start_time))
+                                        <p>{!! get_region_halland_drift_fix_date($myItems[$i]->start_time) !!}</p>
+                                    @else
+                                        -
+                                    @endif
                                 </div>
                                 <div class="col col-12 sm-col-2">
                                     <strong class="only-sm">Beräknat avslut</strong>
-                                    <p>{!! get_region_halland_drift_fix_date($myItems[$i]->end_time) !!}</p>
+                                    @if(get_region_halland_drift_fix_date($myItems[$i]->end_time))
+                                        <p>{!! get_region_halland_drift_fix_date($myItems[$i]->end_time) !!}</p>
+                                    @else
+                                        -
+                                    @endif
                                 </div>
-                                <div class="col col-12 sm-col-2">
+                                <div class="col col-12 sm-col-1">
                                     <strong class="only-sm">Uppdateringar</strong>
-                                    <p>{{ count($myItems[$i]->follow_up) }}</p>
+                                    @if(count($myItems[$i]->follow_up) > 0)
+                                        <p>{{ count($myItems[$i]->follow_up) }}</p>
+                                    @else
+                                        -
+                                    @endif
+                                </div>
+                                <div class="col col-12 sm-col-1">
+                                    &nbsp;
                                 </div>
 
                                 {{-- Toggle knapp --}}
-                                <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; color: black; background: #E4E4E4;">
-                                    <span style=""><strong>Beskrivning</strong></span><button id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; background:white; font-size:1.4em; width:1.5em; height: 1.5em; border-radius: 50%; border: 0px solid transparent;"></button>
+                                <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; max-width: 65em; color: black; background: #E4E4E4;">
+                                    <span class="pl1"><strong>Beskrivning</strong></span><button id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; background:white; font-size:1.4em; width:1.5em; height: 1.5em; border-radius: 50%; border: 0px solid transparent;"></button>
                                 </div>
 
                                 <div class="rh-disturbance-card__content" data-toggleID="{{$togglerID}}">
@@ -374,20 +385,35 @@
                             </div>
                             <div class="col col-12 sm-col-2">
                                 <strong class="only-sm">Start</strong>
-                                <p>{!! get_region_halland_drift_fix_date($myItem->start_time) !!}</p>
+                                @if(get_region_halland_drift_fix_date($myItem->start_time))
+                                    <p>{!! get_region_halland_drift_fix_date($myItem->start_time) !!}</p>
+                                @else
+                                    -
+                                @endif
                             </div>
                             <div class="col col-12 sm-col-2">
                                 <strong class="only-sm">Beräknat avslut</strong>
-                                <p>{!! get_region_halland_drift_fix_date($myItem->end_time) !!}</p>
+                                @if(get_region_halland_drift_fix_date($myItem->end_time))
+                                    <p>{!! get_region_halland_drift_fix_date($myItem->end_time) !!}</p>
+                                @else
+                                    -
+                                @endif
                             </div>
-                            <div class="col col-12 sm-col-2">
+                            <div class="col col-12 sm-col-1">
                                 <strong class="only-sm">Uppdateringar</strong>
-                                <p>{{ count($myItem->follow_up) }}</p>
+                                @if(count($myItem->follow_up) > 0)
+                                    <p>{{ count($myItem->follow_up) }}</p>
+                                @else
+                                    -
+                                @endif
+                            </div>
+                            <div class="col col-12 sm-col-1">
+                                &nbsp;
                             </div>
 
                             {{-- Toggle knapp --}}
-                            <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; color: black; background: #E4E4E4;">
-                                <span style=""><strong>Beskrivning</strong></span><button id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; background:white; font-size:1.4em; width:1.5em; height: 1.5em; border-radius: 50%; border: 0px solid transparent;"></button>
+                            <div class="col col-12 md-col-12 p1 flex justify-between" style="align-items: center; color: black; max-width:65em; background: #E4E4E4;">
+                                <span class="pl1"><strong>Beskrivning</strong></span><button id="{{$togglerID}}" class="rh-disturbance-card__toggle icon-plus" style="font-family: feather !important; background:white; font-size:1.4em; width:1.5em; height: 1.5em; border-radius: 50%; border: 0px solid transparent;"></button>
                             </div>
 
                             <div class="rh-disturbance-card__content" data-toggleID="{{$togglerID}}">
