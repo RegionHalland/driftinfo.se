@@ -1,10 +1,10 @@
 <!doctype html>
 <html data-server="{!! env('SITE_SERVER') !!}" data-version="1.0.0">
-  @include('partials.cookie-notice')
-  @include('partials.head')
+  @include('partials.messages.cookie-notice')
+  @include('partials.sitewide.html-head')
   <body @php body_class() @endphp>
-    @include('partials.header')
+    @include('partials.sitewide.site-header')
     @yield('content')
-    @include('partials.footer')
+    @include('partials.sitewide.site-footer')
   </body>
 </html>

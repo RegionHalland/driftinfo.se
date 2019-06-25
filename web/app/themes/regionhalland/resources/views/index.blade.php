@@ -60,8 +60,8 @@
 
     <div class="mx-auto" style="max-width: 1440px;">
         <div class="center" style="position:relative; top: -3.6em;max-width: 1152px">
-            @include('partials.tabs-level1')
-            @include('partials.tabs-level2')
+            @include('partials.navigation.tabs-level1')
+            @include('partials.navigation.tabs-level2')
 
             <div style="background: white;">
                 
@@ -72,15 +72,15 @@
                 @if($myPagination['antal_items'] > 0)
 
                     {{-- Rubrikrad, visa bara från tablet och uppåt --}}
-                    @include('partials.column-headlines-row')
+                    @include('partials.content.column-headlines-row')
 
                     <div class="p1">
                         <?php while ($i < $myPagination['end_item']) { ?>
-                            @include('partials.data-card-current')
+                            @include('partials.content.data-card-current')
                         <?php $i++; } ?>
                     </div>
                 @else
-                    @include('partials.message-no-disturbances')
+                    @include('partials.content.message-no-disturbances')
                 @endif
             </div>
         </div>
@@ -91,15 +91,15 @@
             <div class="center" style="max-width:1152px;">
                 <div class="p1">
                     @foreach($myItems as $myItem)
-                        @include('partials.data-card-deleted')
+                        @include('partials.content.data-card-deleted')
                     @endforeach
                 </div>
             </div>
         @endif
 
         {{-- Paginering --}}
-        @if($myPagination['total_pages'] > 1)
-            @include('partials.pagination')
+        @if($myPagination['total_pages'] >= 2)
+            @include('partials.pagination.pagination')
         @endif
     </div>
 
