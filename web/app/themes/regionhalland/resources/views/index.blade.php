@@ -45,7 +45,6 @@
         if ($sid == 3 && $oid == 3) {
             $type = 9;
         }
-
     ?>
 
     @php($myNumbers = get_region_halland_drift_info_get_numbers())
@@ -58,7 +57,6 @@
             <div style="background: white;">
                 
                 @php($myItems = get_region_halland_drift_info($type))
-
                 @php($myPagination = get_region_halland_array_pagination(count($myItems),10,'sida'))
                 @php($i = $myPagination['start_item'])
            
@@ -82,11 +80,11 @@
         @if($showDeleted == 1)        
             @php($myItems = get_region_halland_drift_info(10))
             <div class="center" style="max-width:1152px;">
-            <div class="p1">
-                @foreach($myItems as $myItem)
-                    @include('partials.data-card-deleted')
-                @endforeach
-            </div>
+                <div class="p1">
+                    @foreach($myItems as $myItem)
+                        @include('partials.data-card-deleted')
+                    @endforeach
+                </div>
             </div>
         @endif
 
