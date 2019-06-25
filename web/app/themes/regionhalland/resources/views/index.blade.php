@@ -17,34 +17,43 @@
             $oid = $_GET["oid"];
         }
 
-        if ($sid == 1 && $oid == 1) {
-            $type = 1;
-            $showDeleted = 1;
-        }
-        if ($sid == 1 && $oid == 2) {
-            $type = 2;
-        }
-        if ($sid == 1 && $oid == 3) {
-            $type = 3;
-        }
-        if ($sid == 2 && $oid == 1) {
-            $type = 4;
-        }
-        if ($sid == 2 && $oid == 2) {
-            $type = 5;
-        }
-        if ($sid == 2 && $oid == 3) {
-            $type = 6;
-        }
-        if ($sid == 3 && $oid == 1) {
-            $type = 7;
-        }
-        if ($sid == 3 && $oid == 2) {
-            $type = 8;
-        }
-        if ($sid == 3 && $oid == 3) {
-            $type = 9;
-        }
+        if($sid == 1)
+            switch ($oid) {
+                case 1:
+                    $type = 1;
+                    $showDeleted = 1;
+                    break;
+                case 2:
+                    $type = 2;
+                    break;
+                case 3:
+                    $type = 3;
+                    break;
+            }
+        elseif($sid == 2)
+            switch ($oid) {
+                case 1:
+                    $type = 4;
+                    break;
+                case 2:
+                    $type = 5;
+                    break;
+                case 3:
+                    $type = 6;
+                    break;
+            }
+        elseif($sid == 3)
+            switch ($oid) {
+                case 1:
+                    $type = 7;
+                    break;
+                case 2:
+                    $type = 8;
+                    break;
+                case 3:
+                    $type = 9;
+                    break;
+            }
     ?>
 
     @php($myNumbers = get_region_halland_drift_info_get_numbers())
