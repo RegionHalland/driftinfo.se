@@ -30,64 +30,6 @@
                 <li><a class="rh-link--navigation" href="/om-webbplatsen">Cookies</a></li>
             </ul>
 
-
         </div>
-
-
     </div>
 </footer>
-
-<script src="{!! env('WP_HOME') !!}/include/scripts/jquery.3.3.1.min.js?ver=3.3.1"></script>
-
-<script src="{!! env('WP_HOME') !!}/styleguide5.0.0/js/components.js"></script>
-
-<script>
-
-    // Dölj alla kort från start
-    $(".rh-disturbance-card__content").hide();
-
-    // Byt synlighet på kortet när man klickar toggle-knappen
-    $(".rh-disturbance-card__toggle").on("click", function(){
-        $("*[data-toggleid=" + event.target.id + "]").toggle();
-        // Byt pil på toggle knappen
-        $("#" + event.target.id).toggleClass("icon-plus").toggleClass("icon-minus");
-    });
-    
-
-
-    // **************************************
-    // *** Javascript set cookie function ***
-    // **************************************
-    function setCookie(name,value,days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-    }
-
-
-    // ****************************
-    // *** Cookie notice accept ***
-    // ****************************
-    $("#cookie-consent").on( "click", function() {
-        // set cookie with vanilla javascript function
-        setCookie('cookie_notice_accepted','1',365);
-        // Hide div with cookie notice text + button
-        $(".rh-cookie").hide();
-    });
-
-</script>
-<script type="text/javascript">var _baTheme=0, _baMode='Aktivera Talande Webb', _baUseCookies=true, _baHideOnLoad=true;</script>
-<script type="text/javascript" src="//www.browsealoud.com/plus/scripts/ba.js"></script>
-
-
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-1181886-12');
-</script>

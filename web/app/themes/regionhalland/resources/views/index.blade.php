@@ -57,7 +57,7 @@
     ?>
 
     @php($myNumbers = get_region_halland_drift_info_get_numbers())
-
+<main id="main">
     <div class="mx-auto" style="max-width: 1440px;">
         <div class="center" style="position:relative; top: -3.6em;max-width: 1152px">
             @include('partials.navigation.tabs-level1')
@@ -102,5 +102,6 @@
             @include('partials.pagination.pagination')
         @endif
     </div>
+</main>
 
 @endsection
