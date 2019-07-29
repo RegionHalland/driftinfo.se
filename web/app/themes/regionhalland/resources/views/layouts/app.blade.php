@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-server="{!! env('SITE_SERVER') !!}" data-version="1.0.0">
+<html lang="sv-se" data-server="{!! env('SITE_SERVER') !!}" data-version="1.0.0">
   @include('partials.sitewide.html-head')
   <body @php body_class() @endphp>
     <header>
