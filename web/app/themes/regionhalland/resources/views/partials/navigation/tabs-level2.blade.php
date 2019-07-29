@@ -11,7 +11,7 @@
                 Alla
             @endif
         </a>
-        <span class="rh-labels" style="color: white; background: #61A2D8">
+        <span class="rh-labels" style="color: white; background: #004890;">
             @switch($sid)
                 @case(1)
                 {{ $myNumbers['alla-pagaende'] }}
@@ -37,7 +37,7 @@
                 IT/Telefoni
             @endif
         </a>
-        <span class="rh-labels" style="color: white; background: #61A2D8">
+        <span class="rh-labels" style="color: white; background: #004890;">
             @switch($sid)
                 @case(1)
                 {{ $myNumbers['it-telefoni-pagaende'] }}
@@ -63,7 +63,7 @@
                 Fastighet
             @endif
         </a>
-        <span class="rh-labels" style="color: white; background: #61A2D8">
+        <span class="rh-labels" style="color: white; background: #004890;">
             @switch($sid)
                 @case(1)
                 {{ $myNumbers['fastighet-pagaende'] }}
