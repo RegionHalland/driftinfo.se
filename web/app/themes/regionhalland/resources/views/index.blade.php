@@ -57,39 +57,38 @@
     ?>
 
     @php($myNumbers = get_region_halland_drift_info_get_numbers())
-    <main id="main">
-        <div class="mx-auto" style="max-width: 1440px;">
-            <div class="center" style="position:relative; top: -3.6em;max-width: 1152px">
-                @include('partials.navigation.tabs-level1')
-                @include('partials.navigation.tabs-level2')
 
-                <div style="background: white;">
+    <div class="mx-auto" style="max-width: 1440px;">
+        <div class="center" style="position:relative; top: -3.6em;max-width: 1152px">
+            @include('partials.navigation.tabs-level1')
+            @include('partials.navigation.tabs-level2')
 
-                    @php($myItems = get_region_halland_drift_info($type))
-                    @php($myPagination = get_region_halland_array_pagination(count($myItems),10,'sida'))
-                    @php($i = $myPagination['start_item'])
+            <div style="background: white;">
 
-                    @if($myPagination['antal_items'] > 0)
+                @php($myItems = get_region_halland_drift_info($type))
+                @php($myPagination = get_region_halland_array_pagination(count($myItems),10,'sida'))
+                @php($i = $myPagination['start_item'])
 
-                        {{-- Rubrikrad (visas bara från tablet och uppåt) --}}
-                        @include('partials.content.column-headlines-row')
+                @if($myPagination['antal_items'] > 0)
 
-                        {{-- Korten för aktuella driftstörningar --}}
-                        @include('partials.content.data-card-current')
+                    {{-- Rubrikrad (visas bara från tablet och uppåt) --}}
+                    @include('partials.content.column-headlines-row')
 
-                    @else
-                        {{-- Visa meddelande om att det inte finns ngra aktuella driftstörningar --}}
-                        @include('partials.content.message-no-disturbances')
-                    @endif
-                </div>
+                    {{-- Korten för aktuella driftstörningar --}}
+                    @include('partials.content.data-card-current')
+
+                @else
+                    {{-- Visa meddelande om att det inte finns ngra aktuella driftstörningar --}}
+                    @include('partials.content.message-no-disturbances')
+                @endif
             </div>
-
-            {{-- Här visas passerade driftstörningar --}}
-            @include('partials.content.data-card-deleted')
-
-            {{-- Paginering --}}
-            @include('partials.pagination.pagination')
         </div>
-    </main>
+
+        {{-- Här visas passerade driftstörningar --}}
+        @include('partials.content.data-card-deleted')
+
+        {{-- Paginering --}}
+        @include('partials.pagination.pagination')
+    </div>
 
 @endsection
