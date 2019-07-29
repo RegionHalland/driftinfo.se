@@ -6,7 +6,7 @@
 
             <div class="clearfix">
                 <div class="col col-12 sm-col-4">
-                    <h3 class="h2">{!! $myItems[$i]->post_title !!}</h3>
+                    <h2 class="h2">{!! $myItems[$i]->post_title !!}</h2>
                     @if($myItems[$i]->date_updated)
                         Senast uppdaterad:<p class=""> {!! get_region_halland_drift_fix_date($myItems[$i]->date_updated) !!}</p> {{-- TODO: Does this take "uppföljning" into account? --}}
                     @endif
