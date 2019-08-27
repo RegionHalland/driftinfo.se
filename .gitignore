@@ -11,6 +11,10 @@ composer.lock
 # OS
 .DS_Store
 
+# Releases
+web/releases/*
+!web/releases/.git
+
 # Application
 web/app/mu-plugins/*/
 web/app/plugins/*
