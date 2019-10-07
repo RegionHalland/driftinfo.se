@@ -39,6 +39,9 @@ git checkout v1.0.0
 
 ## Versionhistorik
 
+### 1.2.0
+- Flyttat repo till Azure Devops
+
 ### 1.1.0
 - Justering av tillgänglighet, dvs nästling, kontrast, attribut m.m.
 - Release av sitespecifik css, dvs "driftinfo.1.3.0-5.1.0.css"
