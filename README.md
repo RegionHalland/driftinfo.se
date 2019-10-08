@@ -39,11 +39,9 @@ git checkout v1.0.0
 
 ## Versionhistorik
 
-### 1.3.0
-- Uppdaterat readme och versionsinfo
-
 ### 1.2.0
 - Flyttat repo till Azure Devops
+- Uppdaterat readme och versionsinfo
 
 ### 1.1.0
 - Justering av tillgänglighet, dvs nästling, kontrast, attribut m.m.
