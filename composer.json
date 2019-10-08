@@ -33,23 +33,23 @@
     },
     {
       "type": "vcs",
-      "url": "https://github.com/RegionHalland/region-halland-mobile-detect.git"
+      "url": "https://regionhalland.visualstudio.com/public.RhWpPlugIns/_git/RhMobileDetect"
     },
     {
       "type": "vcs",
-      "url": "https://github.com/RegionHalland/region-halland-acf-add-theme-subpage.git"
+      "url": "https://regionhalland.visualstudio.com/public.RhWpPlugIns/_git/RhAcfAddThemeSubPage"
     },
     {
       "type": "vcs",
-      "url": "https://github.com/RegionHalland/region-halland-acf-cookie-notice.git"
+      "url": "https://regionhalland.visualstudio.com/public.RhWpPlugIns/_git/RhAcfCookieNotice"
     },
     {
       "type": "vcs",
-      "url": "https://github.com/RegionHalland/region-halland-acf-drift-info.git"
+      "url": "https://regionhalland.visualstudio.com/public.RhWpPlugIns/_git/RhAcfDriftInfo"
     },
     {
       "type": "vcs",
-      "url": "https://github.com/RegionHalland/region-halland-array-pagination.git"
+      "url": "https://regionhalland.visualstudio.com/public.RhWpPlugIns/_git/RhArrayPagination"
     },
     {
       "type": "package",
