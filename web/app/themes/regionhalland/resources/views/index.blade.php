@@ -60,8 +60,8 @@
 
     <div class="mx-auto" style="max-width: 1440px;">
         <div class="center" style="position:relative; top: -3.6em;max-width: 1152px">
-            @include('partials.navigation.tabs-level1')
-            @include('partials.navigation.tabs-level2')
+            @include('partials.navigation.tabs-level-1')
+            @include('partials.navigation.tabs-level-2')
 
             <div style="background: white;">
 
