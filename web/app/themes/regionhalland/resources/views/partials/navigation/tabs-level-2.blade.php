@@ -1,76 +1,80 @@
-
+{{-- Fliknavigation nivå 2 - container --}}
 <div class="mt3 mb2 rh-buttongroup">
 
     {{-- Fliknavigation nivå 2 - Fliken "Alla" --}}
-    <div class="rh-buttongroup__button rh-buttongroup__button--left @if($sid == 1) rh-buttongroup__button--active @endif">
+    <div class="rh-buttongroup__button rh-buttongroup__button--left @if($oid == 1) rh-buttongroup__button--active @endif">
 
-        <a class="rh-buttongroup__button-text" href="./?oid={{$oid}}&sid=1">
-            @if($sid ==1 )
-                <strong>Pågående</strong>
+        <a class="rh-buttongroup__button-text" href="./?oid=1&sid={{$sid}}">
+            @if($oid ==1 )
+                <strong>Alla</strong>
             @else
-                Pågående
+                Alla
             @endif
         </a>
         <span class="rh-labels" style="color: white; background: #004890;">
-            @switch($oid)
+            @switch($sid)
                 @case(1)
                 {{ $myNumbers['alla-pagaende'] }}
                 @break
                 @case(2)
-                {{ $myNumbers['it-telefoni-pagaende'] }}
+                {{ $myNumbers['alla-kommande'] }}
                 @break
                 @case(3)
-                {{ $myNumbers['fastighet-pagaende'] }}
+                {{ $myNumbers['alla-avslutade'] }}
                 @break
             @endswitch
         </span>
-    </div>
-    
-     <div class="rh-buttongroup__button rh-buttongroup__button--left @if($sid == 2) rh-buttongroup__button--active @endif">
 
-        <a class="rh-buttongroup__button-text" href="./?oid={{$oid}}&sid=2" class="">
-            @if($sid == 2 )
-                <strong>Kommande</strong>
+    </div>
+
+    {{-- Fliknavigation nivå 2 - Fliken "IT/telefoni" --}}
+    <div class="rh-buttongroup__button @if($oid == 2) rh-buttongroup__button--active @endif">
+
+        <a class="rh-buttongroup__button-text" href="./?oid=2&sid={{$sid}}">
+            @if($oid == 2 )
+                <strong>IT/Telefoni</strong>
             @else
-                Kommande
+                IT/Telefoni
             @endif
         </a>
         <span class="rh-labels" style="color: white; background: #004890;">
-            @switch($oid)
+            @switch($sid)
                 @case(1)
-                {{ $myNumbers['alla-kommande'] }}
+                {{ $myNumbers['it-telefoni-pagaende'] }}
                 @break
                 @case(2)
                 {{ $myNumbers['it-telefoni-kommande'] }}
                 @break
                 @case(3)
-                {{ $myNumbers['fastighet-kommande'] }}
+                {{ $myNumbers['it-telefoni-avslutade'] }}
                 @break
             @endswitch
         </span>
-      </div>        
-      
-     <div class="rh-buttongroup__button rh-buttongroup__button--left @if($sid == 3) rh-buttongroup__button--active @endif">
 
-        <a class="rh-buttongroup__button-text" href="./?oid={{$oid}}&sid=3" class="">
-            @if($sid == 3 )
-                <strong>Avslutade</strong>
+    </div>
+
+    {{-- Fliknavigation nivå 2 - Fliken "Fastighet" --}}
+    <div class="rh-buttongroup__button rh-buttongroup__button--right @if($oid == 3) rh-buttongroup__button--active @endif">
+
+        <a class="rh-buttongroup__button-text" href="./?oid=3&sid={{$sid}}">
+            @if($oid ==3 )
+                <strong>Fastighet</strong>
             @else
-                Avslutade
+                Fastighet
             @endif
         </a>
         <span class="rh-labels" style="color: white; background: #004890;">
-            @switch($oid)
+            @switch($sid)
                 @case(1)
-                {{ $myNumbers['alla-avslutade'] }}
+                {{ $myNumbers['fastighet-pagaende'] }}
                 @break
                 @case(2)
-                {{ $myNumbers['it-telefoni-avslutade'] }}
+                {{ $myNumbers['fastighet-kommande'] }}
                 @break
                 @case(3)
                 {{ $myNumbers['fastighet-avslutade'] }}
                 @break
             @endswitch
         </span>
-      </div>        
+    </div>
 </div>

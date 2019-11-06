@@ -28,6 +28,7 @@
                 <li><a class="rh-link--navigation" href="/om-webbplatsen">Om webbplatsen</a></li>
                 <li><a class="rh-link--navigation" href="https://www.regionhalland.se/om-region-halland/dataskydd/">Behandling av personuppgifter</a></li>
                 <li><a class="rh-link--navigation" href="/om-webbplatsen">Cookies</a></li>
+                <li><a class="rh-link--navigation" href="/redogorelse-for-tillganglighet">Redogörelse för tillgänglighet</a></li>
             </ul>
 
         </div>
