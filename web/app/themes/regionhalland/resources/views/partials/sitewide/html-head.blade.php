@@ -26,5 +26,11 @@
 		.rh-back-to-top{
 			background-color:#004890;cursor:pointer;
 		}
+		.rh-back-to-top:hover {
+			background-color:#61A2D8;color:#fff
+		}
+		.rh-pagination-link:hover {
+			background-color:#61A2D8;color:#fff
+		}		
 	</style>
 </head>
