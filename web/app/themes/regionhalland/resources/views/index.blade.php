@@ -66,7 +66,7 @@
             <div style="background: white;">
 
                 @php($myItems = get_region_halland_drift_info($type))
-                @php($myPagination = get_region_halland_array_pagination(count($myItems),10,'sida'))
+                @php($myPagination = get_region_halland_array_pagination(count($myItems),3,'sida'))
                 @php($i = $myPagination['start_item'])
 
                 @if($myPagination['antal_items'] > 0)

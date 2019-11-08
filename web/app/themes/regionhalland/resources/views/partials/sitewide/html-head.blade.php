@@ -22,4 +22,9 @@
 	<script src="{!! env('WP_HOME') !!}/include/scripts/jquery.3.3.1.min.js?ver=3.3.1"></script>
 	<script src="{!! env('WP_HOME') !!}/styleguide5.0.0/js/components.js"></script>
 	<script src="{!! env('WP_HOME') !!}/include/scripts/application.js"></script>
+	<style>
+		.rh-back-to-top{
+			background-color:#004890;cursor:pointer;
+		}
+	</style>
 </head>
