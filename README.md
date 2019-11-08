@@ -39,6 +39,11 @@ git checkout v1.0.0
 
 ## Versionhistorik
 
+### 1.3.0
+- Proxima font
+- Uppåtknapp vid långa sidor
+- Justerad logik
+
 ### 1.2.0
 - Flyttat repo till Azure Devops
 - Uppdaterat readme och versionsinfo

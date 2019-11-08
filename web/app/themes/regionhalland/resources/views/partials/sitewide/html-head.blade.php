@@ -16,7 +16,8 @@
 	<meta name="theme-color" content="#ffffff" />
     <title>Driftinformation - Region Halland</title>
 	<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css">
-	<link href="{!! env('WP_HOME') !!}/styleguide_cdn/driftinfo.1.3.0-5.1.0.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/whh2fjs-1.0.0.css">
+	<link rel="stylesheet" href="{!! env('WP_HOME') !!}/styleguide_cdn/driftinfo.1.5.0-9.0.2.css"/>
 	<link rel="stylesheet" href="{!! env('WP_HOME') !!}/include/style/development.css" type="text/css" media="all" />
 	<script src="{!! env('WP_HOME') !!}/include/scripts/jquery.3.3.1.min.js?ver=3.3.1"></script>
 	<script src="{!! env('WP_HOME') !!}/styleguide5.0.0/js/components.js"></script>
