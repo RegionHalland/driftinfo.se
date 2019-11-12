@@ -1,9 +1,9 @@
 @if($myPagination['total_pages'] >= 1)
     <div class="pb2" style="display:flex; justify-content: center;">
         @if($myPagination['antal_items'] == 1)
-            <h2 class="h3" style="border-bottom: 4px solid #004890">{{ $myPagination['antal_items'] }} driftstörning - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
+            <h2 class="h3 rh-heading-underlined">{{ $myPagination['antal_items'] }} driftstörning - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
         @else
-            <h2 class="h3" style="border-bottom: 4px solid #004890">{{ $myPagination['antal_items'] }} driftstörningar - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
+            <h2 class="h3 rh-heading-underlined">{{ $myPagination['antal_items'] }} driftstörningar - sida {{ $myPagination['current_page'] }} av {{ $myPagination['total_pages'] }}</h2>
         @endif
     </div>
     <div class="rh-pagination pb3" style="display:flex; justify-content: center;">
