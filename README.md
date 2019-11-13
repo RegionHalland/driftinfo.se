@@ -39,6 +39,9 @@ git checkout v1.0.0
 
 ## Versionhistorik
 
+### 1.4.0
+- Ny version av custom login via SSO
+
 ### 1.3.0
 - Proxima font
 - Uppåtknapp vid långa sidor
