@@ -39,6 +39,9 @@ git checkout v1.0.0
 
 ## Versionhistorik
 
+### 1.5.0
+- Cache-control via headers
+
 ### 1.4.0
 - Ny version av custom login via SSO
 
